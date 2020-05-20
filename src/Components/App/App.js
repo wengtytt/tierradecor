@@ -1,9 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { Route } from 'react-router-dom';
+import './App.scss';
+// import NotificationBar from '../NotificationBar';
+import Header from '../Header';
+// import Home from '../../routes/Home';
+import configureNavbarStore from '../../hooks-store/navbar';
+
+configureNavbarStore();
 
 function App() {
-    return <h1>Tierradecor</h1>;
+    return (
+        <main className="App">
+            <Header />
+            {/* <Route path="/" component={Home} exact /> */}
+            {/* <Route path="/projects" component={Projects} /> */}
+        </main>
+    );
 }
 
 export default App;
