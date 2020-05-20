@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tierradecor/static/css/main.5f361e03.chunk.css",
+    "main.js": "/tierradecor/static/js/main.a6f2906a.chunk.js",
+    "main.js.map": "/tierradecor/static/js/main.a6f2906a.chunk.js.map",
+    "runtime-main.js": "/tierradecor/static/js/runtime-main.6402f287.js",
+    "runtime-main.js.map": "/tierradecor/static/js/runtime-main.6402f287.js.map",
+    "static/js/2.69b03fcd.chunk.js": "/tierradecor/static/js/2.69b03fcd.chunk.js",
+    "static/js/2.69b03fcd.chunk.js.map": "/tierradecor/static/js/2.69b03fcd.chunk.js.map",
+    "index.html": "/tierradecor/index.html",
+    "precache-manifest.b12414cf9d1d2ba8fc76bdeb1408ba6f.js": "/tierradecor/precache-manifest.b12414cf9d1d2ba8fc76bdeb1408ba6f.js",
+    "service-worker.js": "/tierradecor/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/tierradecor/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.69b03fcd.chunk.js.LICENSE.txt": "/tierradecor/static/js/2.69b03fcd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tierradecor/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6402f287.js",
+    "static/js/2.69b03fcd.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.a6f2906a.chunk.js"
+  ]
+}
