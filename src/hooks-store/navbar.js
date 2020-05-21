@@ -4,6 +4,7 @@ const configureStore = () => {
     const actions = {};
 
     initStore(actions, {
+        mobileNav: false,
         navs: [
             {
                 label: 'HOME',
@@ -31,7 +32,7 @@ const configureStore = () => {
             },
             {
                 label: 'Shop',
-                path: '',
+                path: 'https://www.google.com',
                 external: true,
             },
         ],

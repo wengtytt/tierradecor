@@ -1,0 +1,230 @@
+#OverlayNav {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    line-height: 1em;
+    text-align: left;
+    overflow: auto;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.97);
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+    -moz-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+    -ms-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+    -o-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+    transition: opacity 0.14s 0s ease-in-out, visibility 0s 0.14s linear;
+    #MobileNavWrapper {
+        position: relative;
+        width: 100%;
+        height: 101%;
+        padding: 100px 0;
+        display: table;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        #MobileNavigation {
+            padding: 0;
+            display: table-cell;
+            vertical-align: middle;
+            -webkit-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: opacity 0.14s 0.14s ease-in-out,
+                visibility 0s 0s linear,
+                -webkit-transform 0.14s 0.18s ease-in-out;
+            -moz-transition: opacity 0.14s 0.14s ease-in-out,
+                visibility 0s 0s linear, -moz-transform 0.14s 0.18s ease-in-out;
+            -ms-transition: opacity 0.14s 0.14s ease-in-out,
+                visibility 0s 0s linear, -ms-transform 0.14s 0.18s ease-in-out;
+            -o-transition: opacity 0.14s 0.14s ease-in-out,
+                visibility 0s 0s linear, -o-transform 0.14s 0.18s ease-in-out;
+            transition: opacity 0.14s 0.14s ease-in-out, visibility 0s 0s linear,
+                transform 0.14s 0.18s ease-in-out;
+            div {
+                box-sizing: border-box;
+                vertical-align: middle;
+                margin: 0;
+            }
+        }
+    }
+    nav {
+        a {
+            display: block;
+            padding: 0.5em 0;
+            font-size: 54px;
+            font-family: 'Raleway', Arial, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 1em;
+            color: rgba(52, 50, 50, 0.78);
+            &:visited {
+                display: block;
+                padding: 0.5em 0;
+                font-size: 54px;
+                font-family: 'Raleway', Arial, sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                text-decoration: none;
+                line-height: 1em;
+                color: rgba(52, 50, 50, 0.78);
+            }
+            &.active {
+                color: #e7dacd;
+                outline: none;
+            }
+        }
+    }
+}
+
+#MobileNavToggle:checked ~ #OverlayNav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0s linear;
+    -moz-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0s linear;
+    -ms-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0s linear;
+    -o-transition: opacity 0.14s 0s ease-in-out, visibility 0s 0s linear;
+    transition: opacity 0.14s 0s ease-in-out, visibility 0s 0s linear;
+}
+#MobileNavToggle:checked ~ #Header {
+    pointer-events: none;
+    background-color: transparent;
+    .mobile-nav-toggle-label {
+        z-index: 1011;
+        pointer-events: auto;
+        .top-bar {
+            transform: rotate(45deg);
+            top: 7px;
+        }
+        .top-bar,
+        .middle-bar,
+        .bottom-bar {
+            transition: top 0.1s 0.1s ease-in-out,
+                transform 0.1s 0.2s ease-in-out;
+        }
+        .middle-bar {
+            opacity: 0;
+        }
+        .bottom-bar {
+            transform: rotate(-45deg);
+            top: 7px;
+        }
+    }
+}
+
+#MobileNavToggle:checked ~ .show-on-scroll-wrapper {
+    .mobile-nav-toggle-label {
+        .top-bar,
+        .bottom-bar {
+            top: 17px;
+            transition: top 0.1s 0.1s ease-in-out,
+                transform 0.1s 0.2s ease-in-out;
+        }
+        .top-bar {
+            transform: rotate(45deg);
+        }
+        .middle-bar {
+            opacity: 0;
+        }
+        .bottom-bar {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.show-on-scroll-wrapper {
+    position: fixed;
+    z-index: 1012;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none;
+    box-sizing: border-box;
+    opacity: 0;
+    font-size: 11px;
+    text-align: center;
+    background-color: #fff;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.14s ease-in-out, visibility 0s 0.14s linear,
+        top 0.14s ease-in-out;
+    &.show {
+        top: 0;
+        transition: opacity 0.14s ease-in-out, visibility 0s 0s linear,
+            top 0.14s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    #OverlayNav #MobileNavWrapper nav div a {
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    #OverlayNav #MobileNavWrapper nav div a {
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #OverlayNav #MobileNavWrapper nav div a {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .show-on-scroll-wrapper {
+        .mobile-nav-toggle-label {
+            margin-top: 0;
+            padding: 10px;
+            background-color: #fff;
+            width: 40px;
+            height: 36px;
+            .top-bar {
+                top: 10px;
+                right: 9px;
+            }
+            .middle-bar {
+                top: 17px;
+                right: 9px;
+            }
+            .bottom-bar {
+                top: 24px;
+                right: 9px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #OverlayNav #MobileNavWrapper nav div a {
+        font-size: 24px;
+    }
+    .mobile-nav-toggle-label {
+        top: 20px;
+        left: 20px;
+    }
+}
