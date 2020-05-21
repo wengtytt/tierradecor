@@ -155,6 +155,7 @@
 }
 
 .show-on-scroll-wrapper {
+    -webkit-font-smoothing: subpixel-antialiased;
     position: fixed;
     z-index: 1012;
     top: -20px;
@@ -170,6 +171,15 @@
     transform: translate3d(0, 0, 0);
     transition: opacity 0.14s ease-in-out, visibility 0s 0.14s linear,
         top 0.14s ease-in-out;
+    #mainNavigation {
+        padding: 5px 0;
+
+        & > div {
+            & > a {
+                padding: 0.75em 1.1em;
+            }
+        }
+    }
     &.show {
         top: 0;
         transition: opacity 0.14s ease-in-out, visibility 0s 0s linear,
@@ -226,5 +236,11 @@
     .mobile-nav-toggle-label {
         top: 20px;
         left: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    body:not(.always-use-overlay-nav) .mobile-nav-toggle-label {
+        display: none;
     }
 }

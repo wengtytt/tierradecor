@@ -10,7 +10,7 @@ const MobileNav = (props) => {
 
     const mainRef = useRef(0);
     const [shouldShowHeader, setShouldShowHeader] = useState(false);
-    const OFFSET = 400;
+    const OFFSET = 700;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -84,6 +84,9 @@ const MobileNav = (props) => {
                     <div className="middle-bar"></div>
                     <div className="bottom-bar"></div>
                 </label>
+                <div id="mainNavWrapper" className="nav-wrapper">
+                    <nav id="mainNavigation">{mobileList}</nav>
+                </div>
             </div>
             <div id="OverlayNav">
                 <div id="MobileNavWrapper" className="nav-wrapper">
