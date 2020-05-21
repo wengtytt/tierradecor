@@ -10,7 +10,7 @@ const MobileNav = (props) => {
 
     const mainRef = useRef(0);
     const [shouldShowHeader, setShouldShowHeader] = useState(false);
-    const OFFSET = 700;
+    const OFFSET = 600;
 
     useEffect(() => {
         const handleScroll = () => {

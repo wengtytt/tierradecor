@@ -95,6 +95,11 @@
             }
         }
     }
+    .index,
+    .external,
+    .collection {
+        display: block;
+    }
 }
 
 #MobileNavToggle:checked ~ #OverlayNav {
@@ -225,6 +230,9 @@
                 top: 24px;
                 right: 9px;
             }
+        }
+        #mainNavWrapper {
+            display: none;
         }
     }
 }
