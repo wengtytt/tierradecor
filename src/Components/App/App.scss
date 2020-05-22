@@ -4,5 +4,14 @@
         visibility: hidden;
     }
     height: 2000px;
-    background-color: #ddd;
+    // background-color: #ddd;
+    #siteWrapper {
+        font-family: 'Roboto', Georgia, serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: 0.85px;
+        line-height: 1.4em;
+        color: #4d4d4d;
+    }
 }
