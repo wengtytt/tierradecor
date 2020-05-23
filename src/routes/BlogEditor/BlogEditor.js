@@ -13,7 +13,7 @@ const BlogEditor = (props) => {
 
     useEffect(() => {
         //get data for existed content
-
+        setContent('test');
         return () => {};
     }, []);
 

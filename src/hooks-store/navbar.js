@@ -15,16 +15,16 @@ const configureStore = () => {
                 path: '/about',
             },
             {
-                label: 'Services',
-                path: '/services',
+                label: 'Meet the team',
+                path: '/team',
             },
             {
-                label: 'Projects',
-                path: '/commercial-renovation',
+                label: 'Inspiration',
+                path: '/inspiration',
             },
             {
                 label: 'Blog',
-                path: '/contractors',
+                path: '/blog',
             },
             {
                 label: 'Contact',

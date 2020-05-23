@@ -7,6 +7,8 @@ import Header from '../Header';
 import Home from '../../routes/Home';
 import Footer from '../Footer';
 import configureNavbarStore from '../../hooks-store/navbar';
+import Blog from '../../routes/Blog';
+
 import BlogEditor from '../../routes/BlogEditor';
 
 configureNavbarStore();
@@ -18,6 +20,7 @@ function App() {
             <Header />
             <div id="siteWrapper">
                 <Route path="/" component={Home} exact />
+                <Route path="/blog" component={Blog} exat />
                 <Route path="/editor" component={BlogEditor} exact />
             </div>
             <Footer />
