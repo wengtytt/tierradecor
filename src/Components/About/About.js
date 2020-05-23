@@ -12,7 +12,6 @@ import AboutUs_2 from "./assets/AboutUs_2.jpg";
 const About = (props) => {
     return (
         <main id="page" role="main" className="About">
-            <div className="content-inner">
                 <div className="html-block">
                     <h1
                         style={{
@@ -23,7 +22,6 @@ const About = (props) => {
                 </div>
 
                 <section className="section-wrapper">
-                    <div className="content-inner">
                         <Grid item xs={12}>
                             <Grid container justify="center" spacing={4}>
                                 <Grid item xs={12} sm={6}>
@@ -38,7 +36,6 @@ const About = (props) => {
                                 </Grid>
                             </Grid>
                         </Grid>
-                    </div>
                 </section>
 
                 <section className="section-wrapper">
@@ -54,7 +51,6 @@ const About = (props) => {
                         </p>
                     </div>
                 </section>
-            </div>
         </main>
     );
 };
