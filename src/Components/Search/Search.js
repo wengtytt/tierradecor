@@ -43,16 +43,6 @@ const Search = () => {
 
     const [term, setTerm] = useState('');
 
-    useEffect(() => {
-        handleSearch();
-
-        window.onscroll = debounce(() => {
-            handleScroll();
-        }, 100);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [dispatch]);
-
     const handleScroll = () => {
         if (
             window.innerHeight + document.documentElement.scrollTop ===
@@ -62,6 +52,22 @@ const Search = () => {
         }
     };
 
+    useEffect(() => {
+        handleSearch();
+
+        const handleSearchScroll = debounce(() => {
+            handleScroll();
+        }, 100);
+
+        window.addEventListener('scroll', handleSearchScroll);
+
+        console.log('fetching blogs');
+        return () => {
+            console.log('removing');
+            window.removeEventListener('scroll', handleSearchScroll, false);
+        };
+    }, [dispatch, handleScroll]);
+
     const classes = useStyles();
 
     const handleSearch = (init = true, method = 'FETCH_BLOGS') => {
@@ -70,6 +76,7 @@ const Search = () => {
         searchTerm += '&page=' + state.searchPage;
 
         if (!state.blogsLoaded || !init) {
+            console.log(searchTerm);
             axios.get(searchTerm).then((response) => {
                 console.log(response);
                 dispatch(method, response.data.hits ? response.data.hits : []);

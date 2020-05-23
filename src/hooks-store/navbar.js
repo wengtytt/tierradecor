@@ -28,7 +28,7 @@ const configureStore = () => {
             },
             {
                 label: 'Contact',
-                path: '/landing/interior-renovation/',
+                path: '/contact',
             },
             {
                 label: 'Shop',

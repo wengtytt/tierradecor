@@ -12,19 +12,22 @@ const MobileNav = (props) => {
     const [shouldShowHeader, setShouldShowHeader] = useState(false);
     const OFFSET = 600;
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
 
-            if (typeof window !== 'undefined' && mainRef.current) {
-                const showHeader = mainRef.current > OFFSET;
-                if (showHeader !== shouldShowHeader) {
-                    setShouldShowHeader(showHeader);
-                }
+        if (typeof window !== 'undefined') {
+            //&& mainRef.current
+            const showHeader = mainRef.current > OFFSET;
+            if (showHeader !== shouldShowHeader) {
+                setShouldShowHeader(showHeader);
             }
+        }
 
-            mainRef.current = currentScrollY;
-        };
+        mainRef.current = currentScrollY;
+    };
+
+    useEffect(() => {
+        // handleScroll();
 
         window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -36,7 +39,7 @@ const MobileNav = (props) => {
             window.removeEventListener('scroll', handleScroll);
             document.body.style.overflow = 'unset';
         };
-    }, [shouldShowHeader, mobNav]);
+    }, [shouldShowHeader, mobNav, handleScroll]);
 
     const mobileList = state.navs.map((item, i) => {
         if (item.path === '/') {
