@@ -11,6 +11,7 @@
         "@testing-library/user-event": "^7.2.1",
         "axios": "^0.19.2",
         "jodit-react": "^1.0.42",
+        "lodash.debounce": "^4.0.8",
         "material-ui": "^0.20.2",
         "node-sass": "^4.14.1",
         "react": "^16.13.1",

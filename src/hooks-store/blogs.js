@@ -6,6 +6,16 @@ const configureStore = () => {
             return {
                 blogs: blogs,
                 blogsLoaded: true,
+                searchPage: state.searchPage + 1,
+            };
+        },
+        APPEND_BLOGS: (state, blogs) => {
+            const newBlogs = [...state.blogs, ...blogs];
+
+            return {
+                blogs: newBlogs,
+                blogsLoaded: true,
+                searchPage: state.searchPage + 1,
             };
         },
     };
@@ -13,6 +23,7 @@ const configureStore = () => {
     initStore(actions, {
         blogs: [],
         blogsLoaded: false,
+        searchPage: 1,
     });
 };
 

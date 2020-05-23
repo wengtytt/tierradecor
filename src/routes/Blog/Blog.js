@@ -8,9 +8,6 @@ const Blog = () => {
     const state = useStore()[0];
     const blogs = state.blogs;
 
-    console.log('render blogs:');
-    console.log(blogs);
-
     const markup = blogs.map((item) => {
         let img = item.largeImageURL;
         return (
@@ -25,7 +22,7 @@ const Blog = () => {
 
     return (
         <main id="page" role="main" className="page">
-            <Grid container xs={12}>
+            <Grid item xs={12}>
                 <Grid container justify="center">
                     <Grid item xs={false} sm={4}></Grid>
                     <Grid item xs={12} sm={4} className="blog-title">
@@ -38,7 +35,6 @@ const Blog = () => {
             </Grid>
             <Grid
                 container
-                xs={12}
                 className="blog-list"
                 spacing={3}
                 justify="flex-start"
