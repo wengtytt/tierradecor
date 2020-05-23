@@ -7,6 +7,7 @@ import configureSlidsStore from '../../hooks-store/slides';
 import { useStore } from '../../hooks-store/store';
 
 import Grid from '@material-ui/core/Grid';
+import SpacingBlock from '../../Utilities/SpacingBlock';
 
 import who_we_are_1 from './assets/whoami_1.jpg';
 import who_we_are_2 from './assets/whoami_2.jpg';
@@ -79,6 +80,32 @@ const Home = (props) => {
                             </Grid>
                         </Grid>
                     </Grid>
+                    <SpacingBlock></SpacingBlock>
+                    <div className="html-block">
+                        <h1
+                            style={{
+                                textAlign: 'center',
+                                whiteSpace: 'pre-wrap',
+                            }}
+                        >
+                            CONTACT US
+                        </h1>
+                        <p
+                            style={{
+                                textAlign: 'center',
+                                whiteSpace: 'pre-wrap',
+                            }}
+                        >
+                            General Inquiries |{' '}
+                            <a href="mailto:hello@leclairdecor.com">
+                                hello@leclairdecor.com{' '}
+                            </a>{' '}
+                            Marketing and Collaboration Inquiries |{' '}
+                            <a href="mailto:sacha@leclairdecor.com">
+                                sacha@leclairdecor.com
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>
