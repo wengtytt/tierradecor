@@ -6,6 +6,8 @@ import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 
+import debounce from 'lodash.debounce';
+
 import configureBlogStore from '../../hooks-store/blogs';
 import { useStore } from '../../hooks-store/store';
 
@@ -43,20 +45,34 @@ const Search = () => {
 
     useEffect(() => {
         handleSearch();
+
+        window.onscroll = debounce(() => {
+            handleScroll();
+        }, 100);
+
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [dispatch]);
+
+    const handleScroll = () => {
+        if (
+            window.innerHeight + document.documentElement.scrollTop ===
+            document.documentElement.offsetHeight
+        ) {
+            handleSearch(false, 'APPEND_BLOGS');
+        }
+    };
 
     const classes = useStyles();
 
-    const handleSearch = (init = true) => {
-        const searchTerm = term ? baseUrl + `&q=${term}` : baseUrl;
+    const handleSearch = (init = true, method = 'FETCH_BLOGS') => {
+        let searchTerm = term ? baseUrl + `&q=${term}` : baseUrl;
+
+        searchTerm += '&page=' + state.searchPage;
 
         if (!state.blogsLoaded || !init) {
             axios.get(searchTerm).then((response) => {
                 console.log(response);
-                dispatch(
-                    'FETCH_BLOGS',
-                    response.data.hits ? response.data.hits : []
-                );
+                dispatch(method, response.data.hits ? response.data.hits : []);
             });
         }
     };
