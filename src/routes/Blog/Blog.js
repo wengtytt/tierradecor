@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Blog.scss';
 import Grid from '@material-ui/core/Grid';
 import Search from '../../Components/Search';
 import { useStore } from '../../hooks-store/store';
 
 const Blog = () => {
+    useEffect(() => {
+        window.dispatchEvent(new CustomEvent('scroll'));
+    }, []);
+
     const state = useStore()[0];
     const blogs = state.blogs;
 
