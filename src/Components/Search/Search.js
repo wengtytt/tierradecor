@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -43,16 +43,34 @@ const Search = () => {
 
     const [term, setTerm] = useState('');
 
-    const handleScroll = () => {
-        if (
-            window.innerHeight + document.documentElement.scrollTop ===
-            document.documentElement.offsetHeight
-        ) {
-            handleSearch(false, 'APPEND_BLOGS');
-        }
-    };
+    const handleSearch = useCallback(
+        (init = true, method = 'FETCH_BLOGS') => {
+            let searchTerm = term ? baseUrl + `&q=${term}` : baseUrl;
+
+            searchTerm += '&page=' + state.searchPage;
+
+            if (!state.blogsLoaded || !init) {
+                axios.get(searchTerm).then((response) => {
+                    dispatch(
+                        method,
+                        response.data.hits ? response.data.hits : []
+                    );
+                });
+            }
+        },
+        [baseUrl, dispatch, state.blogsLoaded, state.searchPage, term]
+    );
 
     useEffect(() => {
+        const handleScroll = () => {
+            if (
+                window.innerHeight + document.documentElement.scrollTop ===
+                document.documentElement.offsetHeight
+            ) {
+                handleSearch(false, 'APPEND_BLOGS');
+            }
+        };
+
         handleSearch();
 
         const handleSearchScroll = debounce(() => {
@@ -61,28 +79,12 @@ const Search = () => {
 
         window.addEventListener('scroll', handleSearchScroll);
 
-        console.log('fetching blogs');
         return () => {
-            console.log('removing');
             window.removeEventListener('scroll', handleSearchScroll, false);
         };
-    }, [dispatch, handleScroll]);
+    }, [dispatch, handleSearch]);
 
     const classes = useStyles();
-
-    const handleSearch = (init = true, method = 'FETCH_BLOGS') => {
-        let searchTerm = term ? baseUrl + `&q=${term}` : baseUrl;
-
-        searchTerm += '&page=' + state.searchPage;
-
-        if (!state.blogsLoaded || !init) {
-            console.log(searchTerm);
-            axios.get(searchTerm).then((response) => {
-                console.log(response);
-                dispatch(method, response.data.hits ? response.data.hits : []);
-            });
-        }
-    };
 
     return (
         <Paper component="form" className={classes.root}>
@@ -94,7 +96,7 @@ const Search = () => {
                     setTerm(event.target.value);
                 }}
                 onKeyDown={(event) => {
-                    if (event.keyCode == 13) {
+                    if (event.keyCode === 13) {
                         event.preventDefault();
                         handleSearch(false);
                         return false;

@@ -1,0 +1,9 @@
+.page.contact {
+    form {
+        display: flex;
+        flex-direction: column;
+        .MuiTextField-root {
+            margin-bottom: 24px;
+        }
+    }
+}
