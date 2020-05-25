@@ -12,12 +12,14 @@ import Contact from '../../routes/Contact';
 
 import BlogEditor from '../../routes/BlogEditor';
 import About from '../About';
-
+import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
 import NotificationBar from '../NotificationBar';
+
 
 configureNavbarStore();
 
 function App() {
+<<<<<<< HEAD
     return (
         <main className="App">
             <NotificationBar></NotificationBar>
@@ -26,6 +28,7 @@ function App() {
             <div id="siteWrapper">
                 <Route path="/" component={Home} exact />
                 <Route path="/about" component={About} exat />
+                <Route path="/team" component={MeetTheTeam} exat />
                 <Route path="/blog" component={Blog} exact />
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />

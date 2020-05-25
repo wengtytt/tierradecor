@@ -3,6 +3,10 @@ import './Slider.scss';
 import SlickSlider from 'react-slick';
 
 const Slider = (props) => {
+
+    console.dir(props);
+    console.dir("============cccc====");
+
     const defaultSettings = {
         dots: true,
         infinite: true,
