@@ -12,14 +12,12 @@ import Contact from '../../routes/Contact';
 
 import BlogEditor from '../../routes/BlogEditor';
 import About from '../About';
-import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
+import MeetTheTeam from '../MeetTheTeam/MeetTheTeam';
 import NotificationBar from '../NotificationBar';
-
 
 configureNavbarStore();
 
 function App() {
-<<<<<<< HEAD
     return (
         <main className="App">
             <NotificationBar></NotificationBar>
