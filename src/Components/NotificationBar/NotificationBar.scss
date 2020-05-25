@@ -1,0 +1,46 @@
+.NotificationBar {
+    text-align: center;
+    transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    a {
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 0.8em 3em;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 2.48px;
+        text-transform: uppercase;
+        line-height: 1.2em;
+        text-decoration: none;
+        color: #e0a971;
+        box-sizing: border-box;
+        &:visited {
+            color: #e0a971;
+        }
+    }
+    .notification-close {
+        cursor: pointer;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2.8em;
+        height: 2.78em;
+        background: rgba(0, 0, 0, 0.15);
+        color: #fff;
+        z-index: 2;
+        &:after {
+            content: '×';
+            display: block;
+            font-family: helvetica, arial, sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 2.7em;
+            letter-spacing: normal;
+            padding: 0;
+        }
+    }
+}
