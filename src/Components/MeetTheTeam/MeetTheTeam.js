@@ -4,7 +4,6 @@ import { useStore } from "../../hooks-store/store";
 import configureMembersStore from "../../hooks-store/members"
 
 import Grid from "@material-ui/core/Grid";
-import SpacingBlock from '../../Utilities/SpacingBlock';
 import Bio from "../../Utilities/Bio";
 
 configureMembersStore();
@@ -18,30 +17,32 @@ const MeetTheTeam = (props) => {
         console.dir("=----");
         return (
             /* <Bio props={member}></Bio> */
-            <section className="section-wrapper">
-                <Grid key={member.id} item xs={12} spacing={10}>
-                    <Grid container item justify="center">
-                        <Grid item xs={12} sm={3}>
-                            <div className="sqs-block">
-                                <div className="member-profile">
-                                    <img className="profile" src={images('./' + member.img)} alt={member.alt}></img>
-                                </div>
-
+            <Grid key={member.id} item xs={12}>
+                <Grid container item justify="center">
+                    <Grid item xs={12} sm={3}>
+                        <div className="bio-block">
+                            <div className="bio-profile">
+                                <img src={images('./' + member.img)} alt={member.alt}></img>
                             </div>
-                        </Grid>
-                        <Grid item xs={12} sm={9}>
+
+                        </div>
+                    </Grid>
+
+                    <Grid item xs={12} sm={9}>
+                        <div className="bio-block bio-left-space">
                             <h1>{member.name}</h1>
                             <p>{member.bio}</p>
-                        </Grid>
+                        </div>
+
                     </Grid>
                 </Grid>
-            </section>
+            </Grid>
         );
     });
 
     return (
         <main id="page" role="main" className="MeetTheTeam">
-            <div className="html-block">
+            <div className="bio-block">
                 <h1
                     style={{
                         textAlign: 'center',
@@ -50,8 +51,11 @@ const MeetTheTeam = (props) => {
                 > Meet The Team </h1>
             </div>
 
-            {members}
+            <section className="section-wrapper">
+                {members}
+            </section>
         </main>
+
     );
 };
 
