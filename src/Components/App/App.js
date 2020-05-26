@@ -14,6 +14,7 @@ import BlogEditor from '../../routes/BlogEditor';
 import About from '../About';
 import MeetTheTeam from '../MeetTheTeam/MeetTheTeam';
 import NotificationBar from '../NotificationBar';
+import Inspiration from '../Inspiration';
 
 configureNavbarStore();
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/" component={Home} exact />
                 <Route path="/about" component={About} exat />
                 <Route path="/team" component={MeetTheTeam} exat />
+                <Route path="/inspiration" component={Inspiration} exat />
                 <Route path="/blog" component={Blog} exact />
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />
