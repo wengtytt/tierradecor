@@ -1,10 +1,10 @@
-import React from "react";
-import "./MeetTheTeam.scss";
-import { useStore } from "../../hooks-store/store";
-import configureMembersStore from "../../hooks-store/members"
+import React from 'react';
+import './MeetTheTeam.scss';
+import { useStore } from '../../hooks-store/store';
+import configureMembersStore from '../../hooks-store/members';
 
-import Grid from "@material-ui/core/Grid";
-import Bio from "../../Utilities/Bio";
+import Grid from '@material-ui/core/Grid';
+// import Bio from "../../Utilities/Bio";
 
 configureMembersStore();
 
@@ -13,8 +13,6 @@ const MeetTheTeam = (props) => {
 
     const images = require.context('./assets', true);
     const members = state.members.map((member, i) => {
-        console.dir(member);
-        console.dir("=----");
         return (
             /* <Bio props={member}></Bio> */
             <Grid key={member.id} item xs={12}>
@@ -22,9 +20,11 @@ const MeetTheTeam = (props) => {
                     <Grid item xs={12} sm={3}>
                         <div className="bio-block">
                             <div className="bio-profile">
-                                <img src={images('./' + member.img)} alt={member.alt}></img>
+                                <img
+                                    src={images('./' + member.img)}
+                                    alt={member.alt}
+                                ></img>
                             </div>
-
                         </div>
                     </Grid>
 
@@ -33,7 +33,6 @@ const MeetTheTeam = (props) => {
                             <h1>{member.name}</h1>
                             <p>{member.bio}</p>
                         </div>
-
                     </Grid>
                 </Grid>
             </Grid>
@@ -48,14 +47,14 @@ const MeetTheTeam = (props) => {
                         textAlign: 'center',
                         whiteSpace: 'pre-wrap',
                     }}
-                > Meet The Team </h1>
+                >
+                    {' '}
+                    Meet The Team{' '}
+                </h1>
             </div>
 
-            <section className="section-wrapper">
-                {members}
-            </section>
+            <section className="section-wrapper">{members}</section>
         </main>
-
     );
 };
 

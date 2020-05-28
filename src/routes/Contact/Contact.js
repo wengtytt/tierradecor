@@ -24,7 +24,7 @@ const Contact = () => {
     const handleChange = (e, name) => {
         formInfo[name] = e.target.value;
 
-        setFormInfo({ formInfo });
+        setFormInfo({ ...formInfo });
     };
 
     const handleSubmit = (e) => {

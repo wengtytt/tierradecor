@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './NotificationBar.scss';
+import api from '../../api.js';
 
 const NotificationBar = () => {
-    const state = useState({
+    const [state, setPromotion] = useState({
         bgColor: '#e6d9cb',
         color: '#fff',
         text: 'Visit our shop',
         link: '',
-    })[0];
+    });
 
     useEffect(() => {
-        //    fetch notification
+        api.get(`/promotion`).then((response) => {
+            if (response.data) {
+                setPromotion(response.data);
+            }
+        });
         return () => {};
     }, []);
 
