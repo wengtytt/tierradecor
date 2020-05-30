@@ -11,14 +11,22 @@ const Inspiration = () => {
     axios.get("https://shopxixtest.herokuapp.com/token.js?const=myToken").then((response) => {
         if (response.data) {
             console.dir("response.data -------------");
-            console.dir(response)
+            console.dir(response.data)
+            const str = response.data;
+            const startIndex = "const myToken = '".length
+            const myToken = str.substring(
+                startIndex, 
+                str.length - 3
+            );
+            console.dir("myToken -------------");
+            console.dir(myToken);
 
             // var Instafeed = require("instafeed.js");
             var feed = new Instafeed({
                 get: 'user',
                 limit: 8,
                 userId: userId,
-                accessToken: accessToken,
+                accessToken: myToken,
                 // template: '<a target="_blank" href="{{link}}"><img src="{{image}}" /><div class="instagram-post-stats"><div class="likes">{{likes}}</div><div class="comments">{{comments}}</div></div><i class="fa fa-instagram"></i></a>',
                 // resolution: 'standard_resolution',
                 // sortBy: 'most-recent',
@@ -43,7 +51,6 @@ const Inspiration = () => {
                     OUR INSTAGRAM{' '}
                 </h1>
             </div>
-
             <div id="instafeed"></div>
         </main>
     );
