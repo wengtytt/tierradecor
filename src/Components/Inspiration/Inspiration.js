@@ -40,7 +40,7 @@ const Inspiration = () => {
     });
 
     // markfod
-    const accessToken1 = "IGQVJVMWRwWGVGUzYtSkJNWnB6UUJLenp2eHdwc205REp1czJPM0ZA2Q2pJdHc4aEtfZAmVBTGk3T2hDWVViYjJqOTcxM1F0dXB3bzBNMEJIWVVRRXNUamdUWUpXMkVXdXRyblZAUektnMWxzc2ZAkY1VzSgZDZD";
+    const accessToken1 = "IGQVJXbHAxM2tydUt1VVJjVWozeXlLLVNvSGIzSTJnRFhmWFVNSGFkcmJ5QlFBdFdPa2dfbHVXbzZAqSjZAxNHA3NnQxa0xIaEJHSFVqaVZAUYUdvc2hfRUpyXzhISHlhYjJCNVM2V0ZAlVW1xUy1xY19QbAZDZD";
     // var Instafeed = require("instafeed.js");
     var feed1 = new Instafeed({
         get: 'user',
@@ -69,7 +69,7 @@ const Inspiration = () => {
                     OUR INSTAGRAM{' '}
                 </h1>
             </div>
-            
+
             <p>insta starts here</p>
             <div id="instafeed"></div>
             <p>insta ends here</p>
