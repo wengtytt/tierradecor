@@ -3,10 +3,11 @@ import './Contact.scss';
 import '../../Utilities/SpacingBlock';
 import Grid from '@material-ui/core/Grid';
 import SpacingBlock from '../../Utilities/SpacingBlock';
-
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { subscription } from '../../services';
 
 const Contact = () => {
     useEffect(() => {
@@ -17,6 +18,8 @@ const Contact = () => {
         name: '',
         email: '',
         msg: '',
+        submitting: false,
+        subscribed: false,
     });
 
     const ref = useRef('form');
@@ -24,12 +27,20 @@ const Contact = () => {
     const handleChange = (e, name) => {
         formInfo[name] = e.target.value;
 
-        setFormInfo({ ...formInfo });
+        setFormInfo({ ...formInfo,  ...{ subscribed: false } });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formInfo);
+        setFormInfo({ ...formInfo, ...{ submitting: true } });
+        subscription.subscribe(formInfo.name, formInfo.email, formInfo.msg)
+            .then(response => {
+                setFormInfo({ ...formInfo, ...{ submitting: false, subscribed: true } });
+            })
+            .catch(error => {
+                console.log(error);
+                setFormInfo({ ...formInfo, ...{ submitting: false } });
+            })
         return false;
     };
 
@@ -101,10 +112,10 @@ const Contact = () => {
                                 onChange={(e) => {
                                     handleChange(e, 'name');
                                 }}
+                                value={formInfo.name}
                                 validators={['required']}
                                 errorMessages={[
                                     'This field is required',
-                                    'Email address is not valid',
                                 ]}
                             />
                             <TextValidator
@@ -116,6 +127,7 @@ const Contact = () => {
                                 onChange={(e) => {
                                     handleChange(e, 'email');
                                 }}
+                                value={formInfo.email}
                                 validators={['required', 'isEmail']}
                                 errorMessages={[
                                     'This field is required',
@@ -128,6 +140,7 @@ const Contact = () => {
                                 label="Message"
                                 multiline
                                 rows={10}
+                                value={formInfo.msg}
                                 onChange={(e) => {
                                     handleChange(e, 'msg');
                                 }}
@@ -136,8 +149,9 @@ const Contact = () => {
                                 variant="contained"
                                 color="primary"
                                 type="submit"
+                                disabled={formInfo.submitting || formInfo.subscribed ? true : false}
                             >
-                                Submit
+                                {formInfo.submitting || formInfo.subscribed ? (formInfo.submitting ? <CircularProgress color="secondary" /> : 'Sent') : 'Submit'}
                             </Button>
                         </ValidatorForm>
                     </Grid>
