@@ -16,6 +16,7 @@ const NotificationBar = () => {
                 setPromotion(response.data);
             }
         });
+
         return () => {};
     }, []);
 
