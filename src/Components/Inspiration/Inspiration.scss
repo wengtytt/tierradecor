@@ -1,7 +1,41 @@
-.blog-title {
-    margin-bottom: 14px !important;
+#instafeed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    // max-width: 64rem;
+    // margin: auto;
 }
-.blog-list {
-    min-height: 400px;
-    margin: 0 !important;
+
+// #instafeed a {
+//     display: block;
+// }
+
+// #instafeed img {
+//     display: block;
+//     width: 100%;
+// }
+
+// Variables
+$black: #111;
+$radius: 10px;
+$transition: all .25s ease-in-out;
+
+
+.instafeed {
+    padding-top: .9375rem;
 }
+
+#instafeed img {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.875rem;
+}
+
+#instafeed img {
+    max-width: 100%;
+    height: auto;
+    border-radius: $radius;
+}
+
