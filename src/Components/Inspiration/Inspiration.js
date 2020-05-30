@@ -5,6 +5,7 @@ import Instafeed from "instafeed.js"
 
 const Inspiration = () => {
 
+    // shopify
     const accessToken = "IGQVJVdThpTHZAKN0w4WDdFdEdkN0hvVkRiLThiY1B5M05GdkZAXVDJPQXdnbzNzZA0dOYXRRR3ZAYVEZAUTWNoTzdoRVJJSDFZAbHV1Y08tc3NDVnZATUWZA5WnZAPRDhJbktmSlBKTm1Bb2VB";
     const userId = 1167154712;
 
@@ -15,7 +16,7 @@ const Inspiration = () => {
             const str = response.data;
             const startIndex = "const myToken = '".length
             const myToken = str.substring(
-                startIndex, 
+                startIndex,
                 str.length - 3
             );
             console.dir("myToken -------------");
@@ -38,6 +39,23 @@ const Inspiration = () => {
         }
     });
 
+    // markfod
+    const accessToken1 = "IGQVJVMWRwWGVGUzYtSkJNWnB6UUJLenp2eHdwc205REp1czJPM0ZA2Q2pJdHc4aEtfZAmVBTGk3T2hDWVViYjJqOTcxM1F0dXB3bzBNMEJIWVVRRXNUamdUWUpXMkVXdXRyblZAUektnMWxzc2ZAkY1VzSgZDZD";
+    // var Instafeed = require("instafeed.js");
+    var feed1 = new Instafeed({
+        get: 'user',
+        limit: 8,
+        userId: userId,
+        accessToken: accessToken1,
+        template: '<a target="_blank" href="{{link}}"><img src="{{image}}" /><div class="instagram-post-stats"><div class="likes">{{likes}}</div><div class="comments">{{comments}}</div></div><i class="fa fa-instagram"></i></a>',
+        resolution: 'standard_resolution',
+        sortBy: 'most-recent',
+    });
+    feed1.run();
+
+    console.dir("feed - 1 -------------");
+    console.dir(feed1);
+
     return (
         <main id="page" role="main" className="page">
             <div className="html-block">
@@ -51,7 +69,10 @@ const Inspiration = () => {
                     OUR INSTAGRAM{' '}
                 </h1>
             </div>
+            
+            <p>insta starts here</p>
             <div id="instafeed"></div>
+            <p>insta ends here</p>
         </main>
     );
 };
