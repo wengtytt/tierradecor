@@ -33,7 +33,6 @@ function App() {
                 <Route path="/about" component={About} exat />
                 <Route path="/team" component={MeetTheTeam} exat />
                 <Route path="/inspiration" component={Inspiration} exat />
-                <Route path="/blog" component={Blog} exact />
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />
             </div>
