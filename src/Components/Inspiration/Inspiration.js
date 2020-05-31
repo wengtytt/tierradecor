@@ -33,7 +33,7 @@ const Inspiration = () => {
             userId: userId,
             accessToken: token,
             template:
-                '<a target="_blank" href="{{link}}"><img src="{{image}}" /><div class="instagram-post-stats"><div class="likes">{{likes}}</div><div class="comments">{{comments}}</div></div><i class="fa fa-instagram"></i></a>',
+                '<div class="picture-container"><a target="_blank" href="{{link}}"><img alt="{{caption}}" title="{{caption}}" src="{{image}}" /></a></div>',
             resolution: 'standard_resolution',
             sortBy: 'most-recent',
         });
@@ -57,10 +57,8 @@ const Inspiration = () => {
                 </h1>
             </div>
 
-            <section class="gallery-container">
-                <div id="instafeed"></div>
-            </section>
-
+            <div id="instafeed"></div>
+            
         </main>
     );
 };

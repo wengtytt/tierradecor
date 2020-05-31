@@ -1,41 +1,66 @@
-#instafeed {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
-    // max-width: 64rem;
-    // margin: auto;
-}
+$color-bg: #fbfbf0;
+$border-radius-default: 2rem;
 
-// #instafeed a {
-//     display: block;
-// }
-
-// #instafeed img {
-//     display: block;
-//     width: 100%;
-// }
-
-// Variables
-$black: #111;
-$radius: 10px;
-$transition: all .25s ease-in-out;
-
-
-.instafeed {
-    padding-top: .9375rem;
-}
-
-#instafeed img {
-    position: relative;
+#instafeed { 
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 28px;
+    -moz-column-gap: 28px;
+    column-gap: 28px;
+    margin-top: 28px;
     overflow: hidden;
-    margin-bottom: 1.875rem;
+	animation: fade-and-slide-in 2000ms 1 forwards
+		cubic-bezier(0.17, 0.91, 0.73, 1.03);
 }
 
-#instafeed img {
-    max-width: 100%;
+@keyframes fade-and-slide-in {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+#instafeed img { 
+    width: 100%; 
     height: auto;
-    border-radius: $radius;
+    transition: 500ms;
+    margin-bottom: 28px;
+    opacity: 0.8;
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+    border-radius: $border-radius-default;
 }
 
+#instafeed img:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+	#instafeed { 
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+	#instafeed div { margin: 0; 
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #instafeed { 
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    #instafeed div { 
+        margin: 0; 
+        width: 200px;
+    }
+}
