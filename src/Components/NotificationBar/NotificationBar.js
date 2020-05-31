@@ -3,7 +3,6 @@ import './NotificationBar.scss';
 import { announcement } from '../../services';
 
 const NotificationBar = () => {
-    console.log("aaa");
     const [state, setPromotion] = useState();
 
     useEffect(() => {
@@ -19,7 +18,7 @@ const NotificationBar = () => {
 
     return (
         <div>
-            {state ? (
+            {state && state.text ? (
                 <div
                     className="NotificationBar"
                     style={{ backgroundColor: state.bgColor }}
