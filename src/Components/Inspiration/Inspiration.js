@@ -4,6 +4,9 @@ import './Inspiration.scss';
 import axios from 'axios';
 
 const Inspiration = () => {
+
+    const inspiration_desc = "Tierra Décor takes pride in every creation they have made, from the smallest bathrooms to the most grandiose kitchen. In doing so, we have created a repository of photos and designs for our new clients to take a look at and draw inspiration from. Each of these designs has been made by our dedicated team members for our former clients; if you work with us, we will provide the same unparalleled care and attention that we put in our previous pieces of work. Whether you come with your own design already ready or choose to draw inspirations from one of the examples below, we will infuse your personality into every piece of work we create for you."
+
     // shopify
     const accessToken =
         'IGQVJVdThpTHZAKN0w4WDdFdEdkN0hvVkRiLThiY1B5M05GdkZAXVDJPQXdnbzNzZA0dOYXRRR3ZAYVEZAUTWNoTzdoRVJJSDFZAbHV1Y08tc3NDVnZATUWZA5WnZAPRDhJbktmSlBKTm1Bb2VB';
@@ -45,20 +48,23 @@ const Inspiration = () => {
 
     return (
         <main id="page" role="main" className="page">
-            <div className="html-block">
+            <div className="h1-block">
                 <h1
                     style={{
                         textAlign: 'center',
                         whiteSpace: 'pre-wrap',
                     }}
                 >
-                    {' '}
-                    OUR INSTAGRAM{' '}
+                    Inspiration
                 </h1>
             </div>
 
+            <div className="h1-block">
+                <p>{inspiration_desc}</p>
+            </div>
+
             <div id="instafeed"></div>
-            
+
         </main>
     );
 };

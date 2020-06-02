@@ -22,7 +22,7 @@ const MeetTheTeam = (props) => {
 
     return (
         <main id="page" role="main" className="MeetTheTeam">
-            <div className="bio-block">
+            <div className="h1-block">
                 <h1
                     style={{
                         textAlign: 'center',
