@@ -10,6 +10,9 @@ import AboutUs_1 from './assets/AboutUs_1.jpg';
 import AboutUs_2 from './assets/AboutUs_2.jpg';
 
 const About = (props) => {
+    const about_us_1 = "Founded in [year], Tierra Décor has revolutionized the world of design from that moment onward."
+    const about_us_2 = "We pride ourselves in our ability to capture the timeless creations through our modern and unique taste. For the past [number] years, we have followed contemporary and influential design movements to establish our place at the forefront of the decor and renovation community. "
+    const about_us_3 = "Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. "
     return (
         <main id="page" role="main" className="About">
             <div className="html-block">
@@ -43,32 +46,9 @@ const About = (props) => {
 
             <section className="section-wrapper">
                 <div className="content-inner">
-                    <p>
-                        Leclair Decor is an Ottawa-based full service design
-                        firm, founded and co-led by husband and wife team, Sacha
-                        and Melissa Leclair. The business (just a side hustle at
-                        first) began in 2011, after we bought and revamped our
-                        first home and started receiving inquiries from friends
-                        and family about decorating services for their spaces.
-                    </p>
-                    <p>
-                        Since then, the company has evolved into a full-fledged
-                        residential design firm, with a principle focus on
-                        larger scale remodels and new builds. Though we are
-                        still based in Ottawa, our talented design team now
-                        serves clients across North America, using top notch
-                        software and embracing all modern means of digital
-                        communication to work seamlessly with homeowners
-                        throughout Canada and the US.
-                    </p>
-                    <p>
-                        We’ve always believed that a home comes to life when
-                        crisp, modern lines are paired with warmer textures and
-                        natural elements. It’s this signature Warm Modern
-                        aesthetic, in combination with our streamlined project
-                        management system, that sets us apart and has garnered
-                        us an international following.
-                    </p>
+                    <p>{about_us_1}</p>
+                    <p>{about_us_2}</p>
+                    <p>{about_us_3}</p>
                 </div>
             </section>
         </main>
