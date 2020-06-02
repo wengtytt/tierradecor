@@ -20,6 +20,12 @@ const MeetTheTeam = (props) => {
     const team_1 = "At Tierra Décor, we have handpicked a team of expert designers, artists, and visionaries to assist our clients in their design journey. Each of our team members holds a true passion for their work and will strive to provide outstanding customer service each step of the way."
     const team_2 = "Our team members are all trailblazers and seasoned professionals and have dedicated their much of their professional lives towards perfecting their art. They are more than ecstatic to work with you and bring the essence of your design to life. Any questions or concerns? Feel free to reach out to us, and we will get back to you right away."
 
+    const our_mission = "Make awe-inspiring kitchen and bathroom products that enlighten your senses."
+
+    const our_vision_1 = "We envision a world of design that isn’t afraid to move forward and slow down at the same time."
+    const our_vision_2 = "Rather than staying stuck on tradition or speeding through fast fads, we see a world that values individuality and harmony — a world that is fully able to blend the old with the new and do it seamlessly."
+    const our_vision_3 = "We have been working in the design industry for [number] years now, and we’ve never left a single customer unhappy."
+
     return (
         <main id="page" role="main" className="MeetTheTeam">
             <div className="h1-block">
@@ -27,10 +33,8 @@ const MeetTheTeam = (props) => {
                     style={{
                         textAlign: 'center',
                         whiteSpace: 'pre-wrap',
-                    }}
-                >
-                    {' '}
-                    Meet The Team{' '}
+                    }}>
+                    Meet The Team
                 </h1>
             </div>
             <section className="section-wrapper">
@@ -54,6 +58,16 @@ const MeetTheTeam = (props) => {
                     <h2>Team</h2>
                     <p>{team_1}</p>
                     <p>{team_2}</p>
+                </div>
+                <div className="content-inner">
+                    <h2>Our Mission</h2>
+                    <p>{our_mission}</p>
+                </div>
+                <div className="content-inner">
+                    <h2>Our Vision</h2>
+                    <p>{our_vision_1}</p>
+                    <p>{our_vision_2}</p>
+                    <p>{our_vision_3}</p>
                 </div>
             </section>
 

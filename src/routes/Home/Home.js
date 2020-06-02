@@ -33,6 +33,8 @@ const Home = (props) => {
         autoplaySpeed: 5000,
     };
 
+    const about_us_3 = "Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. "
+
     return (
         <main id="page" role="main" className="Home">
             <section id="gallery-section">
@@ -61,9 +63,7 @@ const Home = (props) => {
                                 whiteSpace: 'pre-wrap',
                             }}
                         >
-                            Leclair Decor is an Ottawa-based residential design
-                            firm founded and co-owned by husband and wife team
-                            Sacha and Melissa Leclair.
+                        {about_us_3}
                         </h2>
                     </div>
                     <Grid item xs={12}>

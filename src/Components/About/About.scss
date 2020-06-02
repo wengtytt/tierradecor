@@ -50,6 +50,11 @@
     h1,  p{
         text-rendering: optimizeLegibility;
     }
+
+    h2 {
+        text-align: center;
+        white-space: pre-wrap;
+    }
     
     p {
         font-family: 'Raleway', Arial, sans-serif;
