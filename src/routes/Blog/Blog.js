@@ -16,9 +16,12 @@ const Blog = () => {
         let img = item.largeImageURL;
         return (
             <Grid key={item.id} item className="blog-item" xs={12} sm={4}>
-                <div className="cover">
-                    <img src={img} alt={item.tags}></img>
+                <div className="cover-block">
+                    <div className="cover">
+                        <img src={img} alt={item.tags}></img>
+                    </div>
                 </div>
+
                 <h2 id={item.id}>{item.tags}</h2>
                 <div className="author">CANDACE PLOTZ - MAY 29, 2020</div>
                 <p>I often hear from clients that they’re not sure what to do with their mantel - so I want to share some Do’s and Don’ts on how to decorate. I want this to be fun and I hope these tips help you get off to the right start.</p>
