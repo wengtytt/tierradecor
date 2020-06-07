@@ -17,6 +17,7 @@ import NotificationBar from '../NotificationBar';
 import Inspiration from '../Inspiration';
 
 import { useEffect } from 'react';
+import BlogPage from '../../routes/BlogPage';
 
 
 
@@ -36,6 +37,8 @@ function App() {
                 <Route path="/blog" component={Blog} exact />
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />
+
+                <Route exact path="/blogid" component={BlogPage} />
             </div>
             <Footer />
             {/* <Route path="/projects" component={Projects} /> */}
