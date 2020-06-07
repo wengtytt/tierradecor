@@ -12,6 +12,9 @@ import SpacingBlock from '../../Utilities/SpacingBlock';
 import who_we_are_1 from './assets/whoami_1.jpg';
 import who_we_are_2 from './assets/whoami_2.jpg';
 
+import blog_1 from './assets/blog_1.jpg';
+import blog_2 from './assets/blog_2.jpg';
+
 configureSlidsStore();
 
 const Home = (props) => {
@@ -63,7 +66,7 @@ const Home = (props) => {
                                 whiteSpace: 'pre-wrap',
                             }}
                         >
-                        {about_us_3}
+                            {about_us_3}
                         </h2>
                     </div>
                     <Grid item xs={12}>
@@ -88,22 +91,45 @@ const Home = (props) => {
                                 whiteSpace: 'pre-wrap',
                             }}
                         >
-                            CONTACT US
+                            BLOG
                         </h1>
-                        <p
+                    </div>
+                    <Grid item xs={12}>
+                        <Grid container justify="center" spacing={4}>
+                            <Grid item xs={12} sm={6}>
+                                <NavLink to="/blog">
+                                    <img src={blog_1} alt="" />
+                                    <div className="title"> How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set) </div>
+                                    <div className="publish-date">MAY 29, 2020</div>
+                                </NavLink>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <NavLink to="/blog">
+                                    <img src={blog_2} alt="" />
+                                    <div className="title"> We're Hiring: Design Technician </div>
+                                    <div className="publish-date">MAY 26, 2020</div>
+                                </NavLink>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <SpacingBlock></SpacingBlock>
+                    <div className="html-block">
+                        <h1
                             style={{
                                 textAlign: 'center',
                                 whiteSpace: 'pre-wrap',
                             }}
                         >
+                            CONTACT US
+                        </h1>
+                        <p className="text-center">
                             General Inquiries |{' '}
-                            <a href="mailto:hello@leclairdecor.com">
-                                hello@leclairdecor.com{' '}
+                            <a href="mailto:sales@tierradecor.com">
+                                sales@tierradecor.com{' '}
                             </a>{' '}
-                            Marketing and Collaboration Inquiries |{' '}
-                            <a href="mailto:sacha@leclairdecor.com">
-                                sacha@leclairdecor.com
-                            </a>
+                            Address |{' '}
+                            <span className="color-theme">
+                                50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
                         </p>
                     </div>
                 </div>

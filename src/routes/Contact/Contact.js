@@ -27,7 +27,7 @@ const Contact = () => {
     const handleChange = (e, name) => {
         formInfo[name] = e.target.value;
 
-        setFormInfo({ ...formInfo,  ...{ subscribed: false } });
+        setFormInfo({ ...formInfo, ...{ subscribed: false } });
     };
 
     const handleSubmit = (e) => {
@@ -62,13 +62,12 @@ const Contact = () => {
                     }}
                 >
                     General Inquiries |{' '}
-                    <a href="mailto:hello@leclairdecor.com">
-                        hello@leclairdecor.com{' '}
+                    <a href="mailto:sales@tierradecor.com">
+                        sales@tierradecor.com{' '}
                     </a>{' '}
-                    Marketing and Collaboration Inquiries |{' '}
-                    <a href="mailto:sacha@leclairdecor.com">
-                        sacha@leclairdecor.com
-                    </a>
+                    Address |{' '}
+                    <span className="color-theme">
+                        50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
                 </p>
             </div>
             <SpacingBlock></SpacingBlock>

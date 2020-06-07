@@ -64,3 +64,34 @@
         }
     }
 }
+
+.title {
+    color: #4d4d4d;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    white-space: pre-wrap;
+    margin: 15px 0;
+}
+
+.publish-date {
+    color: #e5dace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.text-center {
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.color-theme {
+    color: #e0a971;
+    text-decoration: none;
+}
