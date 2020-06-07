@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Search from '../../Components/Search';
 import { useStore } from '../../hooks-store/store';
 
+import blog_1 from './assets/blog_1.jpg';
+
 const Blog = () => {
     useEffect(() => {
         window.dispatchEvent(new CustomEvent('scroll'));
@@ -14,18 +16,21 @@ const Blog = () => {
 
     const markup = blogs.map((item) => {
         let img = item.largeImageURL;
-        return (
-            <Grid key={item.id} item className="blog-item" xs={12} sm={4}>
-                <div className="cover-block">
-                    <div className="cover">
-                        <img src={img} alt={item.tags}></img>
-                    </div>
-                </div>
 
-                <h2 id={item.id}>{item.tags}</h2>
-                <div className="author">CANDACE PLOTZ - MAY 29, 2020</div>
-                <p>I often hear from clients that they’re not sure what to do with their mantel - so I want to share some Do’s and Don’ts on how to decorate. I want this to be fun and I hope these tips help you get off to the right start.</p>
-                <span>Read More →</span>
+        let cover = blog_1;
+        let alt = item.alt;
+        let title = item.tags;
+        let date = "MAY 29, 2020"
+
+        return (
+            <Grid key={item.id} item xs={12} sm={4} className="blog-profile default">
+                <div className="blog-image">
+                    <a className="blog-img-link" href="#">
+                        <img src={cover} alt={alt} />
+                    </a>
+                </div>
+                <div className="blog-meta summary-date">{date}</div>
+                <a className="blog-title summary-title" href="#">{title}</a>
             </Grid>
         );
     });
