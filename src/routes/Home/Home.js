@@ -96,18 +96,26 @@ const Home = (props) => {
                     </div>
                     <Grid item xs={12}>
                         <Grid container justify="center" spacing={4}>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
-                                    <img src={blog_1} alt="" />
-                                    <div className="title"> How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set) </div>
-                                    <div className="publish-date">MAY 29, 2020</div>
+                                    <div className="blog-image">
+                                        <a className="blog-img-link" href="#">
+                                            <img src={blog_1} alt="" />
+                                        </a>
+                                    </div>
+                                    <div className="blog-meta summary-date">MAY 29, 2020</div>
+                                    <a className="blog-title summary-title" href="#">How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set)</a>
                                 </NavLink>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
-                                    <img src={blog_2} alt="" />
-                                    <div className="title"> We're Hiring: Design Technician </div>
-                                    <div className="publish-date">MAY 26, 2020</div>
+                                    <div className="blog-image">
+                                        <a className="blog-img-link" href="#">
+                                            <img src={blog_2} alt="" />
+                                        </a>
+                                    </div>
+                                    <div className="blog-meta summary-date">MAY 26, 2020</div>
+                                    <a className="blog-title summary-title" href="#">We're Hiring: Design Technician</a>
                                 </NavLink>
                             </Grid>
                         </Grid>
