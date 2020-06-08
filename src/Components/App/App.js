@@ -15,11 +15,9 @@ import About from '../About';
 import MeetTheTeam from '../MeetTheTeam/MeetTheTeam';
 import NotificationBar from '../NotificationBar';
 import Inspiration from '../Inspiration';
-
-import { useEffect } from 'react';
 import BlogPage from '../../routes/BlogPage';
 
-
+import { useEffect } from 'react';
 
 configureNavbarStore();
 
@@ -34,14 +32,14 @@ function App() {
                 <Route path="/about" component={About} exat />
                 <Route path="/team" component={MeetTheTeam} exat />
                 <Route path="/inspiration" component={Inspiration} exat />
+
                 <Route path="/blog" component={Blog} exact />
+                <Route path="/blog/:id" component={BlogPage} exact/>
+
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />
-
-                <Route exact path="/blogid" component={BlogPage} />
             </div>
             <Footer />
-            {/* <Route path="/projects" component={Projects} /> */}
         </main>
     );
 }

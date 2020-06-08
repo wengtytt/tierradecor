@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import './Blog.scss';
 import Grid from '@material-ui/core/Grid';
 import Search from '../../Components/Search';
+import { NavLink } from 'react-router-dom';
 import { useStore } from '../../hooks-store/store';
 
 import blog_1 from './assets/blog_1.jpg';
 
-const Blog = () => {
+const Blog = (props) => {
     useEffect(() => {
         window.dispatchEvent(new CustomEvent('scroll'));
     }, []);
@@ -24,13 +25,19 @@ const Blog = () => {
 
         return (
             <Grid key={item.id} item xs={12} sm={4} className="blog-profile default">
-                <div className="blog-image">
-                    <a className="blog-img-link" href="#">
-                        <img src={cover} alt={alt} />
-                    </a>
-                </div>
-                <div className="blog-meta summary-date">{date}</div>
-                <a className="blog-title summary-title" href="#">{title}</a>
+                <NavLink
+                    to={{
+                        pathname: `/blog/${item.id}`,
+                    }}
+                >
+                    <div className="blog-image">
+                        <span className="blog-img-link">
+                            <img src={cover} alt={alt} />
+                        </span>
+                    </div>
+                    <div className="blog-meta summary-date">{date}</div>
+                    <span className="blog-title summary-title">{title}</span>
+                </NavLink>
             </Grid>
         );
     });

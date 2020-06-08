@@ -1,44 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import './BlogPage.scss';
+import api from '../api.js';
 
-import BlogContent from '../BlogContent';
-import { blog } from '../../services';
+export const blog = {
+    getInfo,
+};
 
-import img_1 from './assets/img_1.jpeg';
-
-const BlogPage = (props) => {
-
-    console.dir("walalalal")
-    const [info, setInfo] = useState({
-        id: '',
-        title: '',
-        des: '',
-        date: '',
-        cover: [],
-        alt: '',
-        enabled: false,
-        // data: [],
-        profile: true,
-        editing: true,
-        loaded: false,
-    });
-
-    useEffect(() => {
-        const id = props.match.params.id;
-
-        if (!info.loaded) {
-            // blog.getInfo(id).then((response) => {
-            //     if (response.data) {
-            setInfo({
-                ...info,
-                id: id, //response.data.id,
-                loaded: true,
-            });
-            //     }
-            // });
-        }
-    }, [info, props.match.params.id]);
-
+function getInfo(blog_id) {
+    const url = `/blog/${blog_id}`;
     const blogs = [
         {
             id: 1,
@@ -71,33 +38,11 @@ const BlogPage = (props) => {
             value: "<ul> <li>Attend and assist with preliminary and incidental site visits to gather accurate measurements and photos</li> <li>Prepare as-built drawings to be used by project leads during design phase </li><li>Prepare, revise, and finalize all technical design documents, including (but not limited to) demo/construction plans, lighting & plumbing plans, custom cabinetry elevations, custom furniture drawings, exterior elevations, 2D and/or 3D mockups, etc.</li> </ul> "
         }
     ]
-
-    const markup = blogs.map((item) => {
-        switch (item.type) {
-            case 'text':
-                return <div dangerouslySetInnerHTML={{ __html: item.value }}></div>;
-            case 'img':
-                return <div className="img_full"><img src={img_1} alt="" /></div>;
-            case 'gallery':
-                return <div>{item.value}</div>;
-            default:
-                return null;
-        }
-    });
-
-    return (
-        <main id="page" role="main" className="blog-page">
-            <section className="section-wrapper">
-                <div className="h1-block">
-                    <div className="summary-date">May 26, 2020</div>
-                    <h1 className="text-center">We're Hiring: Design Technician</h1>
-                </div>
-            </section>
-            <section className="section-wrapper">
-                <BlogContent {...info}></BlogContent>;
-            </section>
-        </main>
-    );
-};
-
-export default BlogPage;
+    return blogs;
+    /*return api
+        .get(url)
+        .then((response) => {
+            return response;
+        })
+        .catch((error) => Promise.reject(error));*/
+}
