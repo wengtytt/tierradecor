@@ -38,11 +38,14 @@ function getInfo(blog_id) {
             value: "<ul> <li>Attend and assist with preliminary and incidental site visits to gather accurate measurements and photos</li> <li>Prepare as-built drawings to be used by project leads during design phase </li><li>Prepare, revise, and finalize all technical design documents, including (but not limited to) demo/construction plans, lighting & plumbing plans, custom cabinetry elevations, custom furniture drawings, exterior elevations, 2D and/or 3D mockups, etc.</li> </ul> "
         }
     ]
-    return blogs;
-    /*return api
+    // return blogs;
+    return api
         .get(url)
         .then((response) => {
             return response;
         })
-        .catch((error) => Promise.reject(error));*/
+        .catch((error) => {
+            return blogs;
+            // Promise.reject(error))
+        }) ;
 }

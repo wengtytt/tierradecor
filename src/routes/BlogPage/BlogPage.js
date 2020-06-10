@@ -17,25 +17,29 @@ const BlogPage = (props) => {
         cover: [],
         alt: '',
         enabled: false,
-        // data: [],
+        data: [],
         profile: true,
         editing: true,
         loaded: false,
     });
 
+    var ma = [];
+
     useEffect(() => {
         const id = props.match.params.id;
 
         if (!info.loaded) {
-            // blog.getInfo(id).then((response) => {
-            //     if (response.data) {
-            setInfo({
-                ...info,
-                id: id, //response.data.id,
-                loaded: true,
+            blog.getInfo(id).then((response) => {
+                ma = response;
+                if (response.data) {
+                    setInfo({
+                        ...info,
+                        id: id, //response.data.id,
+                        loaded: true,
+                        data: response
+                    });
+                }
             });
-            //     }
-            // });
         }
     }, [info, props.match.params.id]);
 
