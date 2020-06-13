@@ -51,7 +51,7 @@ const Inspiration = () => {
                 </h1>
             </div>
 
-            <div className="h1-block">
+            <div id="inspiration_desc" className="h1-block">
                 <p>{inspiration_desc}</p>
             </div>
 

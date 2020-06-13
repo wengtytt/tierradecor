@@ -1,6 +1,11 @@
 $color-bg: #fbfbf0;
 $border-radius-default: 2rem;
 
+#inspiration_desc {
+    animation: fade-and-slide-in 2000ms 1 forwards
+		cubic-bezier(0.17, 0.91, 0.73, 1.03);
+}
+
 #instafeed { 
     -webkit-column-count: 3;
     -moz-column-count: 3;
