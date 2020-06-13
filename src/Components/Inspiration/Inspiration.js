@@ -1,7 +1,8 @@
 /* global jQuery, padding */
 import React, { useEffect } from 'react';
 import './Inspiration.scss';
-import axios from 'axios';
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 const Inspiration = () => {
 
@@ -28,6 +29,17 @@ const Inspiration = () => {
 
     return (
         <main id="page" role="main" className="page">
+            <ReactTitle title="Inspiration" />
+            <MetaTags>
+                <title>Inspiration</title>
+                <meta name="Inspiration" content={inspiration_desc} />
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="INSPIRATION — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/inspiration" />
+                <meta itemprop="name" content="INSPIRATION — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/inspiration"/>
+            </MetaTags>
+
             <div className="h1-block">
                 <h1
                     style={{
@@ -35,7 +47,7 @@ const Inspiration = () => {
                         whiteSpace: 'pre-wrap',
                     }}
                 >
-                    Inspiration
+                    INSPIRATION
                 </h1>
             </div>
 

@@ -4,7 +4,9 @@ import { useStore } from '../../hooks-store/store';
 import configureMembersStore from '../../hooks-store/members';
 
 import Grid from '@material-ui/core/Grid';
-// import Bio from "../../Utilities/Bio";
+
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 configureMembersStore();
 
@@ -26,15 +28,27 @@ const MeetTheTeam = (props) => {
     const our_vision_2 = "Rather than staying stuck on tradition or speeding through fast fads, we see a world that values individuality and harmony — a world that is fully able to blend the old with the new and do it seamlessly."
     const our_vision_3 = "We have been working in the design industry for [number] years now, and we’ve never left a single customer unhappy."
 
+    const meta_meetTheTeam = funders_1 + funders_2 + funders_3 + team_1 + team_2 + our_mission + our_vision_1 + our_vision_2 + our_vision_3;
+
     return (
         <main id="page" role="main" className="MeetTheTeam">
+            <ReactTitle title="Meet The Team" />
+            <MetaTags>
+                <title>Meet The Team</title>
+                <meta name="About" content={meta_meetTheTeam} />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="team — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/team" />
+                <meta itemprop="name" content="team — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/team" />
+            </MetaTags>
             <div className="h1-block">
                 <h1
                     style={{
                         textAlign: 'center',
                         whiteSpace: 'pre-wrap',
                     }}>
-                    Meet The Team
+                    MEET THE TEAM
                 </h1>
             </div>
             <section className="section-wrapper">

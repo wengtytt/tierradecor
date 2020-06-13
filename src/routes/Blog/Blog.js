@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Search from '../../Components/Search';
 import { NavLink } from 'react-router-dom';
 import { useStore } from '../../hooks-store/store';
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 import blog_1 from './assets/blog_1.jpg';
 
@@ -44,6 +46,17 @@ const Blog = (props) => {
 
     return (
         <main id="page" role="main" className="blog">
+            <ReactTitle title="Blog" />
+            <MetaTags>
+                <title>Blog</title>
+                <meta name="About" content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Blog — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/blog" />
+                <meta itemprop="name" content="Blog — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/blog" />
+            </MetaTags>
+
             <section className="section-wrapper">
                 <div className="h1-block">
                     <h1
@@ -51,7 +64,7 @@ const Blog = (props) => {
                             textAlign: 'center',
                             whiteSpace: 'pre-wrap',
                         }}>
-                        Blog
+                        BLOG
                 </h1>
                 </div>
                 <div className="search"><Search></Search></div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import './About.scss';
-// import { useStore } from "../../hooks-store/store";
 import { NavLink } from 'react-router-dom';
-
 import Grid from '@material-ui/core/Grid';
-// import SpacingBlock from '../../Utilities/SpacingBlock';
+
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 import AboutUs_1 from './assets/AboutUs_1.jpg';
 import AboutUs_2 from './assets/AboutUs_2.jpg';
@@ -18,8 +18,21 @@ const About = (props) => {
     const our_value_2 = "We know how important intricacy is when trying to convey a message through your design and household. One detail out of place could be the difference between something extraordinary and something that is simply uninteresting. We hold a sharp eye out for the smallest details to make sure your kitchen or bathroom is perfect."
     const our_value_3 = "Tierra Décor has built its own style of design through its principles of balance. Being able to flawlessly combine traditional techniques with individual ideas is our speciality, and we unmovable abide by this idea."
 
+    const meta_about = about_us_1 + about_us_2 + about_us_3 + our_value_1 + our_value_2 + our_value_3;
+
     return (
         <main id="page" role="main" className="About">
+            <ReactTitle title="About" />
+            <MetaTags>
+                <title>About</title>
+                <meta name="About" content={meta_about} />
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="About — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/about" />
+                <meta itemprop="name" content="About — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/about"/>
+            </MetaTags>
+
             <div className="html-block">
                 <h1
                     style={{
@@ -70,7 +83,7 @@ const About = (props) => {
                     <h2>Beauty and balance!</h2>
                     <p>{our_value_3}</p>
                 </div>
-                
+
             </section>
         </main>
     );

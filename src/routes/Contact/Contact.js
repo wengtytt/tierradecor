@@ -8,6 +8,8 @@ import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { subscription } from '../../services';
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 const Contact = () => {
     useEffect(() => {
@@ -46,6 +48,17 @@ const Contact = () => {
 
     return (
         <main id="page" role="main" className="page contact">
+            <ReactTitle title="Contact" />
+            <MetaTags>
+                <title>Contact</title>
+                <meta name="About" content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Contact — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/contact" />
+                <meta itemprop="name" content="Contact — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/contact" />
+            </MetaTags>
+            
             <div className="html-block">
                 <h1
                     style={{

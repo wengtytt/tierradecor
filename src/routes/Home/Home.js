@@ -15,6 +15,9 @@ import who_we_are_2 from './assets/whoami_2.jpg';
 import blog_1 from './assets/blog_1.jpg';
 import blog_2 from './assets/blog_2.jpg';
 
+import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
+
 configureSlidsStore();
 
 const Home = (props) => {
@@ -40,6 +43,17 @@ const Home = (props) => {
 
     return (
         <main id="page" role="main" className="Home">
+            <ReactTitle title="Tierra Decor" />
+            <MetaTags>
+                <title>About</title>
+                <meta name="About" content={about_us_3} />
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content="Home — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/" />
+                <meta itemprop="name" content="Home — Tierra Decor" />
+                <meta itemprop="url" content="https://www.tierradecor.com/"/>
+            </MetaTags>
+
             <section id="gallery-section">
                 <div id="gallery-wrapper">
                     <div className="gallery-content">
