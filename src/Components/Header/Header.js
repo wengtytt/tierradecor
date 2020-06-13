@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.scss';
 import { useStore } from '../../hooks-store/store';
 import { NavLink } from 'react-router-dom';
-import Logo from './assets/logo.png';
+import Logo from './assets/TierraDecorLogo.png';
 
 const Header = (props) => {
     const state = useStore()[0];
