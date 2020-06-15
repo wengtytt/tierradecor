@@ -1,12 +1,11 @@
-/* global jQuery, padding */
 import React, { useEffect } from 'react';
 import './Inspiration.scss';
 import { ReactTitle } from 'react-meta-tags';
 import MetaTags from 'react-meta-tags';
 
 const Inspiration = () => {
-
-    const inspiration_desc = "Tierra Décor takes pride in every creation they have made, from the smallest bathrooms to the most grandiose kitchen. In doing so, we have created a repository of photos and designs for our new clients to take a look at and draw inspiration from. Each of these designs has been made by our dedicated team members for our former clients; if you work with us, we will provide the same unparalleled care and attention that we put in our previous pieces of work. Whether you come with your own design already ready or choose to draw inspirations from one of the examples below, we will infuse your personality into every piece of work we create for you."
+    const inspiration_desc =
+        'Tierra Décor takes pride in every creation they have made, from the smallest bathrooms to the most grandiose kitchen. In doing so, we have created a repository of photos and designs for our new clients to take a look at and draw inspiration from. Each of these designs has been made by our dedicated team members for our former clients; if you work with us, we will provide the same unparalleled care and attention that we put in our previous pieces of work. Whether you come with your own design already ready or choose to draw inspirations from one of the examples below, we will infuse your personality into every piece of work we create for you.';
 
     const userId = 36672383443;
 
@@ -34,10 +33,19 @@ const Inspiration = () => {
                 <title>Inspiration</title>
                 <meta name="Inspiration" content={inspiration_desc} />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="INSPIRATION — Tierra Decor" />
-                <meta property="og:url" content="https://www.tierradecor.com/inspiration" />
+                <meta
+                    property="og:title"
+                    content="INSPIRATION — Tierra Decor"
+                />
+                <meta
+                    property="og:url"
+                    content="https://www.tierradecor.com/inspiration"
+                />
                 <meta itemProp="name" content="INSPIRATION — Tierra Decor" />
-                <meta itemProp="url" content="https://www.tierradecor.com/inspiration" />
+                <meta
+                    itemProp="url"
+                    content="https://www.tierradecor.com/inspiration"
+                />
             </MetaTags>
 
             <div className="h1-block">
@@ -56,7 +64,6 @@ const Inspiration = () => {
             </div>
 
             <div id="instafeed"></div>
-
         </main>
     );
 };

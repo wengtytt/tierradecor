@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogContent.scss';
-import { useStore } from '../../hooks-store/store';
+// import { useStore } from '../../hooks-store/store';
 import Grid from '@material-ui/core/Grid';
 import TextContent from './TextContent';
 import ImgContent from './ImgContent';
@@ -8,8 +8,8 @@ import GalleryContent from './GalleryContent';
 
 const BlogContent = (props) => {
     // const id = props.id;
-    console.dir("=============")
-    console.dir(props)
+    console.dir('=============');
+    console.dir(props);
 
     const blogContents = [];
 

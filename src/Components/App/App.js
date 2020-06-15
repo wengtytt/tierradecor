@@ -17,8 +17,6 @@ import NotificationBar from '../NotificationBar';
 import Inspiration from '../Inspiration';
 import BlogPage from '../../routes/BlogPage';
 
-import { useEffect } from 'react';
-
 configureNavbarStore();
 
 function App() {
@@ -34,7 +32,7 @@ function App() {
                 <Route path="/inspiration" component={Inspiration} exat />
 
                 <Route path="/blog" component={Blog} exact />
-                <Route path="/blog/:id" component={BlogPage} exact/>
+                <Route path="/blog/:id" component={BlogPage} exact />
 
                 <Route path="/contact" component={Contact} exact />
                 <Route path="/editor" component={BlogEditor} exact />
