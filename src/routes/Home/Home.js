@@ -45,13 +45,13 @@ const Home = (props) => {
         <main id="page" role="main" className="Home">
             <ReactTitle title="Tierra Decor" />
             <MetaTags>
-                <title>About</title>
+                <title>Tierra Decor</title>
                 <meta name="About" content={about_us_3} />
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Home — Tierra Decor" />
                 <meta property="og:url" content="https://www.tierradecor.com/" />
-                <meta itemprop="name" content="Home — Tierra Decor" />
-                <meta itemprop="url" content="https://www.tierradecor.com/"/>
+                <meta itemProp="name" content="Home — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/"/>
             </MetaTags>
 
             <section id="gallery-section">
@@ -113,23 +113,23 @@ const Home = (props) => {
                             <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
                                     <div className="blog-image">
-                                        <a className="blog-img-link" href="#">
+                                        <div className="blog-img-link">
                                             <img src={blog_1} alt="" />
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="blog-meta summary-date">MAY 29, 2020</div>
-                                    <a className="blog-title summary-title" href="#">How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set)</a>
+                                    <div className="blog-title summary-title">How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set)</div>
                                 </NavLink>
                             </Grid>
                             <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
                                     <div className="blog-image">
-                                        <a className="blog-img-link" href="#">
+                                        <div className="blog-img-link">
                                             <img src={blog_2} alt="" />
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="blog-meta summary-date">MAY 26, 2020</div>
-                                    <a className="blog-title summary-title" href="#">We're Hiring: Design Technician</a>
+                                    <div className="blog-title summary-title">We're Hiring: Design Technician</div>
                                 </NavLink>
                             </Grid>
                         </Grid>

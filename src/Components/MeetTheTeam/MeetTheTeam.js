@@ -39,8 +39,8 @@ const MeetTheTeam = (props) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="team — Tierra Decor" />
                 <meta property="og:url" content="https://www.tierradecor.com/team" />
-                <meta itemprop="name" content="team — Tierra Decor" />
-                <meta itemprop="url" content="https://www.tierradecor.com/team" />
+                <meta itemProp="name" content="team — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/team" />
             </MetaTags>
             <div className="h1-block">
                 <h1

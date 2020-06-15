@@ -53,8 +53,8 @@ const Blog = (props) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Blog — Tierra Decor" />
                 <meta property="og:url" content="https://www.tierradecor.com/blog" />
-                <meta itemprop="name" content="Blog — Tierra Decor" />
-                <meta itemprop="url" content="https://www.tierradecor.com/blog" />
+                <meta itemProp="name" content="Blog — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/blog" />
             </MetaTags>
 
             <section className="section-wrapper">

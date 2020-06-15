@@ -8,7 +8,6 @@ import img_1 from './assets/img_1.jpeg';
 
 const BlogPage = (props) => {
 
-    console.dir("walalalal")
     const [info, setInfo] = useState({
         id: '',
         title: '',
@@ -23,14 +22,11 @@ const BlogPage = (props) => {
         loaded: false,
     });
 
-    var ma = [];
-
     useEffect(() => {
         const id = props.match.params.id;
 
         if (!info.loaded) {
             blog.getInfo(id).then((response) => {
-                ma = response;
                 if (response.data) {
                     setInfo({
                         ...info,
