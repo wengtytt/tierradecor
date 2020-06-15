@@ -26,11 +26,11 @@ const About = (props) => {
             <MetaTags>
                 <title>About</title>
                 <meta name="About" content={meta_about} />
-                <meta property="og:type" content="website"/>
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content="About — Tierra Decor" />
                 <meta property="og:url" content="https://www.tierradecor.com/about" />
-                <meta itemprop="name" content="About — Tierra Decor" />
-                <meta itemprop="url" content="https://www.tierradecor.com/about"/>
+                <meta itemProp="name" content="About — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/about" />
             </MetaTags>
 
             <div className="html-block">

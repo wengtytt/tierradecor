@@ -39,24 +39,19 @@ const Home = (props) => {
         autoplaySpeed: 5000,
     };
 
-    const about_us_3 =
-        'Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. ';
+    const about_us_3 = "Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. "
 
-    const title = 'Home — Tierra Decor';
     return (
         <main id="page" role="main" className="Home">
             <ReactTitle title="Tierra Decor" />
             <MetaTags>
-                <title>{title}</title>
+                <title>Tierra Decor</title>
                 <meta name="About" content={about_us_3} />
-                <meta property="og:type" content="website" />
+                <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Home — Tierra Decor" />
-                <meta
-                    property="og:url"
-                    content="https://www.tierradecor.com/"
-                />
+                <meta property="og:url" content="https://www.tierradecor.com/" />
                 <meta itemProp="name" content="Home — Tierra Decor" />
-                <meta itemProp="url" content="https://www.tierradecor.com/" />
+                <meta itemProp="url" content="https://www.tierradecor.com/"/>
             </MetaTags>
 
             <section id="gallery-section">
@@ -115,51 +110,26 @@ const Home = (props) => {
                     </div>
                     <Grid item xs={12}>
                         <Grid container justify="center" spacing={4}>
-                            <Grid
-                                item
-                                xs={12}
-                                sm={6}
-                                className="blog-profile default"
-                            >
+                            <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
                                     <div className="blog-image">
-                                        <a className="blog-img-link" href="#">
+                                        <div className="blog-img-link">
                                             <img src={blog_1} alt="" />
-                                        </a>
+                                        </div>
                                     </div>
-                                    <div className="blog-meta summary-date">
-                                        MAY 29, 2020
-                                    </div>
-                                    <a
-                                        className="blog-title summary-title"
-                                        href="#"
-                                    >
-                                        How To Mix & Match Furniture Like A
-                                        Designer (Instead Of Buying A Set)
-                                    </a>
+                                    <div className="blog-meta summary-date">MAY 29, 2020</div>
+                                    <div className="blog-title summary-title">How To Mix & Match Furniture Like A Designer (Instead Of Buying A Set)</div>
                                 </NavLink>
                             </Grid>
-                            <Grid
-                                item
-                                xs={12}
-                                sm={6}
-                                className="blog-profile default"
-                            >
+                            <Grid item xs={12} sm={6} className="blog-profile default">
                                 <NavLink to="/blog">
                                     <div className="blog-image">
-                                        <a className="blog-img-link" href="#">
+                                        <div className="blog-img-link">
                                             <img src={blog_2} alt="" />
-                                        </a>
+                                        </div>
                                     </div>
-                                    <div className="blog-meta summary-date">
-                                        MAY 26, 2020
-                                    </div>
-                                    <a
-                                        className="blog-title summary-title"
-                                        href="#"
-                                    >
-                                        We're Hiring: Design Technician
-                                    </a>
+                                    <div className="blog-meta summary-date">MAY 26, 2020</div>
+                                    <div className="blog-title summary-title">We're Hiring: Design Technician</div>
                                 </NavLink>
                             </Grid>
                         </Grid>
@@ -181,8 +151,7 @@ const Home = (props) => {
                             </a>{' '}
                             Address |{' '}
                             <span className="color-theme">
-                                50 Colonnade Rd B200, Nepean, ON K2E 7J6{' '}
-                            </span>
+                                50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
                         </p>
                     </div>
                 </div>

@@ -35,43 +35,28 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormInfo({ ...formInfo, ...{ submitting: true } });
-        subscription
-            .subscribe(formInfo.name, formInfo.email, formInfo.msg)
-            .then((response) => {
-                setFormInfo({
-                    ...formInfo,
-                    ...{ submitting: false, subscribed: true },
-                });
+        subscription.subscribe(formInfo.name, formInfo.email, formInfo.msg)
+            .then(response => {
+                setFormInfo({ ...formInfo, ...{ submitting: false, subscribed: true } });
             })
-            .catch((error) => {
+            .catch(error => {
                 console.log(error);
                 setFormInfo({ ...formInfo, ...{ submitting: false } });
-            });
+            })
         return false;
     };
-
-    const title = 'Contact — Tierra Decor';
 
     return (
         <main id="page" role="main" className="page contact">
             <ReactTitle title="Contact" />
             <MetaTags>
-                <title>{title}</title>
-                <meta
-                    name="About"
-                    content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
-                />
+                <title>Contact</title>
+                <meta name="About" content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={title} />
-                <meta
-                    property="og:url"
-                    content="https://www.tierradecor.com/contact"
-                />
-                <meta itemprop="name" content="Contact — Tierra Decor" />
-                <meta
-                    itemprop="url"
-                    content="https://www.tierradecor.com/contact"
-                />
+                <meta property="og:title" content="Contact — Tierra Decor" />
+                <meta property="og:url" content="https://www.tierradecor.com/contact" />
+                <meta itemProp="name" content="Contact — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/contact" />
             </MetaTags>
 
             <div className="html-block">
@@ -95,8 +80,7 @@ const Contact = () => {
                     </a>{' '}
                     Address |{' '}
                     <span className="color-theme">
-                        50 Colonnade Rd B200, Nepean, ON K2E 7J6{' '}
-                    </span>
+                        50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
                 </p>
             </div>
             <SpacingBlock></SpacingBlock>
@@ -142,7 +126,9 @@ const Contact = () => {
                                 }}
                                 value={formInfo.name}
                                 validators={['required']}
-                                errorMessages={['This field is required']}
+                                errorMessages={[
+                                    'This field is required',
+                                ]}
                             />
                             <TextValidator
                                 required
@@ -175,21 +161,9 @@ const Contact = () => {
                                 variant="contained"
                                 color="primary"
                                 type="submit"
-                                disabled={
-                                    formInfo.submitting || formInfo.subscribed
-                                        ? true
-                                        : false
-                                }
+                                disabled={formInfo.submitting || formInfo.subscribed ? true : false}
                             >
-                                {formInfo.submitting || formInfo.subscribed ? (
-                                    formInfo.submitting ? (
-                                        <CircularProgress color="secondary" />
-                                    ) : (
-                                        'Sent'
-                                    )
-                                ) : (
-                                    'Submit'
-                                )}
+                                {formInfo.submitting || formInfo.subscribed ? (formInfo.submitting ? <CircularProgress color="secondary" /> : 'Sent') : 'Submit'}
                             </Button>
                         </ValidatorForm>
                     </Grid>

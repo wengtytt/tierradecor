@@ -33,11 +33,11 @@ const Inspiration = () => {
             <MetaTags>
                 <title>Inspiration</title>
                 <meta name="Inspiration" content={inspiration_desc} />
-                <meta property="og:type" content="website"/>
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content="INSPIRATION — Tierra Decor" />
                 <meta property="og:url" content="https://www.tierradecor.com/inspiration" />
-                <meta itemprop="name" content="INSPIRATION — Tierra Decor" />
-                <meta itemprop="url" content="https://www.tierradecor.com/inspiration"/>
+                <meta itemProp="name" content="INSPIRATION — Tierra Decor" />
+                <meta itemProp="url" content="https://www.tierradecor.com/inspiration" />
             </MetaTags>
 
             <div className="h1-block">
