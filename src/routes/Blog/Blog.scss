@@ -50,6 +50,12 @@
                     overflow: hidden;
                     text-decoration: none;
                     color: inherit;
+                    min-height: 482px;
+
+                    .cover-img {
+                        object-fit: fit;
+                        min-height: 482px;;
+                    }
                 }
             }
             .blog-title {

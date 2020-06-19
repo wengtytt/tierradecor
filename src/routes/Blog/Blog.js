@@ -105,7 +105,7 @@ const Blog = (props) => {
         if (
             state.blogs.length === 0 ||
             window.innerHeight + document.documentElement.scrollTop >=
-                document.documentElement.offsetHeight
+            document.documentElement.offsetHeight
         ) {
             getBlogs();
         }
@@ -120,14 +120,14 @@ const Blog = (props) => {
     }, [handleSearchScroll]);
 
     const markup = state.blogs.map((item) => {
-        const title = props.title,
-            date = props.date_display,
-            cover = props.cover_image ? props.cover_image.location : blog_1;
-        const alt = props.alt_text;
+        const title = item.title,
+            date = item.date_display,
+            cover = item.cover_image ? item.cover_image.location : blog_1;
+        const alt = item.alt_text;
 
         return (
             <Grid
-                key={item.id}
+                key={item.blog_id}
                 item
                 xs={12}
                 sm={4}
@@ -135,12 +135,12 @@ const Blog = (props) => {
             >
                 <NavLink
                     to={{
-                        pathname: `/blog/${item.id}`,
+                        pathname: `/blog/${item.blog_id}`,
                     }}
                 >
                     <div className="blog-image">
                         <span className="blog-img-link">
-                            <img src={cover} alt={alt} />
+                            <img class="cover-img" src={cover} alt={alt} />
                         </span>
                     </div>
                     <div className="blog-meta summary-date">{date}</div>

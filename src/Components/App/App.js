@@ -10,7 +10,7 @@ import configureNavbarStore from '../../hooks-store/navbar';
 import Blog from '../../routes/Blog';
 import Contact from '../../routes/Contact';
 
-import BlogEditor from '../../routes/BlogEditor';
+// import BlogEditor from '../../routes/BlogEditor';
 import About from '../About';
 import MeetTheTeam from '../MeetTheTeam/MeetTheTeam';
 import NotificationBar from '../NotificationBar';
@@ -35,7 +35,7 @@ function App() {
                 <Route path="/blog/:id" component={BlogPage} exact />
 
                 <Route path="/contact" component={Contact} exact />
-                <Route path="/editor" component={BlogEditor} exact />
+                {/* <Route path="/editor" component={BlogEditor} exact /> */}
             </div>
             <Footer />
         </main>

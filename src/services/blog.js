@@ -6,7 +6,7 @@ export const blog = {
 };
 
 function get(search, page, size, before) {
-    var url = `/blog`;
+    var url = `/blog/live`;
     if (!search && size) {
         url += `?size=${size}`;
         if (before) {
