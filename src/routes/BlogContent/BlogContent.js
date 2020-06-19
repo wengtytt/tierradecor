@@ -7,20 +7,15 @@ import ImgContent from './ImgContent';
 import GalleryContent from './GalleryContent';
 
 const BlogContent = (props) => {
-    // const id = props.id;
-    console.dir('=============');
-    console.dir(props);
 
-    const blogContents = [];
-
-    const data = blogContents.map((item, i) => {
-        switch (item.type) {
+    const data = props.data.map((item, i) => {
+        switch (item.content_type) {
             case 'text':
-                return <TextContent key={i} {...item}></TextContent>;
-            case 'img':
-                return <ImgContent key={i} {...item}></ImgContent>;
+                return <TextContent key={item.blog_content_id} {...item}></TextContent>;
+            case 'image':
+                return <ImgContent key={item.blog_content_id} {...item}></ImgContent>;
             case 'gallery':
-                return <GalleryContent key={i} {...item}></GalleryContent>;
+                return <GalleryContent key={item.blog_content_id} {...item}></GalleryContent>;
             default:
                 return null;
         }
@@ -28,15 +23,13 @@ const BlogContent = (props) => {
 
     return (
         <Grid container className="blog-content default">
-            <Grid item xs={2}></Grid>
-            <Grid item xs={8} className="blog-inner">
+            <Grid item xs={12} className="blog-inner">
                 <div className="blog-header">
                     <div className="blog-meta">{props.date}</div>
                     <div className="blog-title">{props.title}</div>
                 </div>
                 <div className="blog-data">{data}</div>
             </Grid>
-            <Grid item xs={2}></Grid>
         </Grid>
     );
 };
