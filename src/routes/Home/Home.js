@@ -174,6 +174,9 @@ const Home = (props) => {
                             <a href="mailto:sales@tierradecor.com">
                                 sales@tierradecor.com{' '}
                             </a>{' '}
+                            Phone |{' '}
+                            <span className="color-theme">
+                                +1 613-226-6886 </span>{' '}
                             Address |{' '}
                             <span className="color-theme">
                                 50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
