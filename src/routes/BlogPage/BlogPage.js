@@ -43,8 +43,8 @@ const BlogPage = (props) => {
         <main id="page" role="main" className="blog-page">
             <section className="section-wrapper">
                 <div className="h1-block">
-                    <div className="summary-date">May 26, 2020</div>
-                    <h1 className="text-center">We're Hiring: Design Technician</h1>
+                    <div className="summary-date">{props.date_display}</div>
+                    <h1 className="text-center">{props.title}</h1>
                 </div>
             </section>
             <section className="section-wrapper">

@@ -25,7 +25,7 @@ const BlogContent = (props) => {
         <Grid container className="blog-content default">
             <Grid item xs={12} className="blog-inner">
                 <div className="blog-header">
-                    <div className="blog-meta">{props.date}</div>
+                    <div className="blog-meta">{props.date_display}</div>
                     <div className="blog-title">{props.title}</div>
                 </div>
                 <div className="blog-data">{data}</div>
