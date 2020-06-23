@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 import './BlogPage.scss';
 
 import BlogContent from '../BlogContent';
@@ -11,14 +12,11 @@ const BlogPage = (props) => {
     const [info, setInfo] = useState({
         id: '',
         title: '',
-        des: '',
-        date: '',
-        cover: [],
-        alt: '',
+        date_display: '',
+        cover_image: {},
+        alt_text: '',
         enabled: false,
         data: [],
-        profile: true,
-        editing: true,
         loaded: false,
     });
 
@@ -30,9 +28,13 @@ const BlogPage = (props) => {
                 if (response.data) {
                     setInfo({
                         ...info,
-                        id: id, //response.data.id,
+                        id: id,
+                        title: response.data.blog.title,
+                        date_display: moment(response.data.blog.date_display).format('YYYY-MM-DD HH:mm'),
+                        cover_image: response.data.blog.cover_image,
+                        alt_text: response.data.blog.alt_text,
                         loaded: true,
-                        data: response.data
+                        data: response.data.contents,
                     });
                 }
             });
@@ -42,10 +44,10 @@ const BlogPage = (props) => {
     return (
         <main id="page" role="main" className="blog-page">
             <section className="section-wrapper">
-                <div className="h1-block">
-                    <div className="summary-date">{props.date_display}</div>
-                    <h1 className="text-center">{props.title}</h1>
-                </div>
+                {/* <div className="h1-block">
+                    <div className="summary-date">{info.date}</div>
+                    <h1 className="text-center">{info.title}</h1>
+                </div> */}
             </section>
             <section className="section-wrapper">
                 <BlogContent {...info}></BlogContent>;
