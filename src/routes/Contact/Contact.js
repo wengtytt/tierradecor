@@ -158,19 +158,25 @@ const Contact = () => {
                                 }}
                             />
                             <Button
+                                style={{
+                                    backgroundColor: '#ac8f64',
+                                    color: '#4d4d4d',
+                                    'font-weight': '400',
+                                    'font-family': 'Raleway',
+                                    'font- size': '12px'
+                            }}
                                 variant="contained"
-                                color="primary"
                                 type="submit"
                                 disabled={formInfo.submitting || formInfo.subscribed ? true : false}
                             >
                                 {formInfo.submitting || formInfo.subscribed ? (formInfo.submitting ? <CircularProgress color="secondary" /> : 'Sent') : 'Submit'}
                             </Button>
                         </ValidatorForm>
-                    </Grid>
-                    <Grid item xs={false} sm={2}></Grid>
+                </Grid>
+                <Grid item xs={false} sm={2}></Grid>
                 </Grid>
             </div>
-        </main>
+        </main >
     );
 };
 
