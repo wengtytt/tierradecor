@@ -1,7 +1,4 @@
-
-
 #page.blog {
-
     .section-wrapper {
         padding: 0px 34px;
         max-width: 1080px;
@@ -22,7 +19,7 @@
         margin-left: auto;
         margin-bottom: 25px;
 
-        @media only screen and (max-device-height: 1024px) {
+        @media only screen and (max-device-height: 1024px) and (max-width: 640px) {
             width: 100%;
         }
     }
@@ -54,7 +51,7 @@
 
                     .cover-img {
                         object-fit: fit;
-                        min-height: 482px;;
+                        min-height: 482px;
                     }
                 }
             }
@@ -111,5 +108,3 @@
 .text-left {
     text-align: left;
 }
-
-
