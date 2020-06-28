@@ -43,7 +43,11 @@ const MobileNav = (props) => {
         if (item.path === '/') {
             return (
                 <div key={i} className="index">
-                    <NavLink to={item.path} exact>
+                    <NavLink
+                        to={item.path}
+                        exact
+                        onClick={() => setMobNav(false)}
+                    >
                         {item.label}
                     </NavLink>
                 </div>
@@ -54,7 +58,9 @@ const MobileNav = (props) => {
 
         return (
             <div key={i} className={className}>
-                <NavLink to={item.path}>{item.label}</NavLink>
+                <NavLink to={item.path} onClick={() => setMobNav(false)}>
+                    {item.label}
+                </NavLink>
             </div>
         );
     });
