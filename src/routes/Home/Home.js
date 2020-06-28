@@ -14,7 +14,6 @@ import who_we_are_1 from './assets/whoami_1.jpg';
 import who_we_are_2 from './assets/whoami_2.jpg';
 
 import blog_1 from './assets/blog_1.jpg';
-import blog_2 from './assets/blog_2.jpg';
 
 import { ReactTitle } from 'react-meta-tags';
 import MetaTags from 'react-meta-tags';

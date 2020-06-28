@@ -5,8 +5,6 @@ import './BlogPage.scss';
 import BlogContent from '../BlogContent';
 import { blog } from '../../services';
 
-import img_1 from './assets/img_1.jpeg';
-
 const BlogPage = (props) => {
 
     const [info, setInfo] = useState({
