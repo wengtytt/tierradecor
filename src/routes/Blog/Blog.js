@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 import './Blog.scss';
 import Grid from '@material-ui/core/Grid';
 import Search from '../../Components/Search';
@@ -121,7 +122,7 @@ const Blog = (props) => {
 
     const markup = state.blogs.map((item) => {
         const title = item.title,
-            date = item.date_display,
+            date = moment(item.date_display).format('YYYY-MM-DD HH:mm'),
             cover = item.cover_image ? item.cover_image.location : blog_1;
         const alt = item.alt_text;
 

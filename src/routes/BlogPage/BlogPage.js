@@ -48,7 +48,7 @@ const BlogPage = (props) => {
                 </div> */}
             </section>
             <section className="section-wrapper">
-                <BlogContent {...info}></BlogContent>;
+                <BlogContent {...info}></BlogContent>
             </section>
         </main>
     );
