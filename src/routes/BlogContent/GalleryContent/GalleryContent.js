@@ -4,16 +4,16 @@ import ImgContent from '../ImgContent';
 import Grid from '@material-ui/core/Grid';
 
 const GalleryContent = React.memo((props) => {
-    const num = props.num || 3;
-    const data = props.data || [];
-    const spacing = typeof props.spacing !== 'undefined' ? props.spacing : 2;
+    const num = props.json_data && props.json_data.num !== 'undefined' ? props.json_data.num : 3;
+    const spacing = props.json_data && props.json_data.spacing !== 'undefined' ? props.json_data.spacing : 2;
+    const data = props.images || [];
 
     let markup = null;
 
     markup = data.map((item) => {
         const sm = 12 / num;
         return (
-            <Grid key={item.id} item className="gallery-item" xs={12} sm={sm}>
+            <Grid key={item.blog_content_id} item className="gallery-item" xs={12} sm={sm}>
                 <ImgContent {...item}></ImgContent>
             </Grid>
         );
