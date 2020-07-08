@@ -7,7 +7,7 @@ import { ReactTitle } from 'react-meta-tags';
 import MetaTags from 'react-meta-tags';
 
 import AboutUs_1 from './assets/AboutUs_1.jpg';
-import AboutUs_2 from './assets/AboutUs_2.jpg';
+import AboutUs_2 from './assets/aboutUs2.jpg';
 
 const About = (props) => {
     const about_us_1 = "Founded in [year], Tierra Décor has revolutionized the world of design from that moment onward."

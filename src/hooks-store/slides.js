@@ -6,25 +6,29 @@ const configureStore = () => {
     initStore(actions, {
         slides: [
             {
-                img: 'Banner_1.jpg',
+                img: 'Slide1.jpg',
                 alt: '',
             },
             {
-                img: 'Banner_2.jpg',
+                img: 'Slide2.jpg',
                 alt: '',
             },
             {
-                img: 'Banner_3.jpg',
+                img: 'Slide3.jpg',
                 alt: '',
             },
             {
-                img: 'Banner_4.jpg',
+                img: 'Slide4.jpg',
                 alt: '',
             },
             {
-                img: 'Banner_5.jpg',
+                img: 'Slide5.jpg',
                 alt: '',
             },
+            {
+                img: 'Slide6.jpg',
+                alt: '',
+            }
         ],
     });
 };
