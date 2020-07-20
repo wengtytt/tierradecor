@@ -63,6 +63,20 @@
                     white-space: pre-wrap;
                 }
             }
+            .img-content {
+                display: flex;
+                justify-content: center;
+                &.fullWidth {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &.centered {
+                    img {
+                        width: auto;
+                    }
+                }
+            }
         }
     }
 }

@@ -87,6 +87,9 @@
                     overflow: hidden;
                     text-decoration: none;
                     color: inherit;
+                    img {
+                        object-fit: cover;
+                    }
                 }
             }
             .blog-title {
