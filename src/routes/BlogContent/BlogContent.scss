@@ -55,6 +55,7 @@
                     height: 0;
                     overflow: hidden;
                     padding-bottom: 100%;
+                    display: block !important;
                 }
             }
             .text-content {
@@ -64,14 +65,14 @@
                 }
             }
             .img-content {
-                display: flex;
-                justify-content: center;
                 &.fullWidth {
                     img {
                         width: 100%;
                     }
                 }
                 &.centered {
+                    display: flex;
+                    justify-content: center;
                     img {
                         width: auto;
                     }
