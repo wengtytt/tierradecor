@@ -170,8 +170,8 @@ const Home = (props) => {
                         </h1>
                         <p className="text-center">
                             General Inquiries |{' '}
-                            <a href="mailto:sales@tierradecor.com">
-                                sales@tierradecor.com{' '}
+                            <a href="mailto:service@tierradecor.com">
+                                service@tierradecor.com{' '}
                             </a>{' '}
                             Phone |{' '}
                             <span className="color-theme">

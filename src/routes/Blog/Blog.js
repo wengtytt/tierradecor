@@ -158,7 +158,7 @@ const Blog = (props) => {
                 <title>Blog</title>
                 <meta
                     name="About"
-                    content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
+                    content="General Inquiries | service@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Blog — Tierra Decor" />

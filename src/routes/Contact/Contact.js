@@ -57,7 +57,7 @@ const Contact = () => {
                 <title>Contact</title>
                 <meta
                     name="About"
-                    content="General Inquiries | sales@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
+                    content="General Inquiries | service@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Contact — Tierra Decor" />
@@ -88,8 +88,8 @@ const Contact = () => {
                     }}
                 >
                     General Inquiries |{' '}
-                    <a href="mailto:sales@tierradecor.com">
-                        sales@tierradecor.com{' '}
+                    <a href="mailto:service@tierradecor.com">
+                        service@tierradecor.com{' '}
                     </a>{' '}
                     Address |{' '}
                     <span className="color-theme">
@@ -189,11 +189,11 @@ const Contact = () => {
                                     formInfo.submitting ? (
                                         <CircularProgress color="secondary" />
                                     ) : (
-                                        'Sent'
-                                    )
+                                            'Sent'
+                                        )
                                 ) : (
-                                    'Submit'
-                                )}
+                                        'Submit'
+                                    )}
                             </Button>
                         </ValidatorForm>
                     </Grid>
