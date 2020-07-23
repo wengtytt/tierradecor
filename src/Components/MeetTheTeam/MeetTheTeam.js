@@ -78,7 +78,7 @@ const MeetTheTeam = (props) => {
                 <Grid item xs={12}>
                     <Grid container item justify="center">
                         <Grid item xs={12} sm={12}>
-                            <img src={images('./team.jpeg')} alt="team"></img>
+                            <img src={images('./meettheteam.jpg')} alt="team"></img>
                         </Grid>
                     </Grid>
                 </Grid>
