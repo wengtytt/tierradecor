@@ -56,13 +56,21 @@ const MobileNav = (props) => {
 
         let className = item.external ? 'external' : 'collection';
 
-        return (
-            <div key={i} className={className}>
-                <NavLink to={item.path} onClick={() => setMobNav(false)}>
+        if (item.external) {
+            return (
+                <a href={item.path} target="_blank">
                     {item.label}
-                </NavLink>
-            </div>
-        );
+                </a>
+            );
+        } else {
+            return (
+                <div key={i} className={className}>
+                    <NavLink to={item.path} onClick={() => setMobNav(false)}>
+                        {item.label}
+                    </NavLink>
+                </div>
+            );
+        }
     });
 
     const toggleChange = () => {

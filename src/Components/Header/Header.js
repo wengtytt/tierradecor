@@ -20,11 +20,19 @@ const Header = (props) => {
 
         let className = item.external ? 'external' : 'collection';
 
-        return (
-            <div key={i} className={className}>
-                <NavLink to={item.path}>{item.label}</NavLink>
-            </div>
-        );
+        if (item.external) {
+            return (
+                <a href={item.path} target="_blank">
+                    {item.label}
+                </a>
+            );
+        } else {
+            return (
+                <div key={i} className={className}>
+                    <NavLink to={item.path}>{item.label}</NavLink>
+                </div>
+            );
+        }
     });
 
     return (
