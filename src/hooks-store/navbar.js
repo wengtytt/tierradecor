@@ -32,7 +32,7 @@ const configureStore = () => {
             },
             {
                 label: 'Shop',
-                path: 'https://www.google.com',
+                path: 'http://shop.tierradecor.com/',
                 external: true,
             },
         ],

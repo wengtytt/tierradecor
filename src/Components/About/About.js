@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { ReactTitle } from 'react-meta-tags';
 import MetaTags from 'react-meta-tags';
 
-import AboutUs_1 from './assets/AboutUs_1.jpg';
+import AboutUs_1 from './assets/aboutus1.png';
 import AboutUs_2 from './assets/aboutUs2.jpg';
 
 const About = (props) => {

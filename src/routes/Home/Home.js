@@ -10,7 +10,7 @@ import { useStore } from '../../hooks-store/store';
 import Grid from '@material-ui/core/Grid';
 import SpacingBlock from '../../Utilities/SpacingBlock';
 
-import who_we_are_1 from './assets/whoami_1.jpg';
+import who_we_are_1 from './assets/aboutus1.png';
 import who_we_are_2 from './assets/aboutUs2.jpg';
 
 import blog_1 from './assets/blog_1.jpg';
