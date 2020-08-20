@@ -1,14 +1,11 @@
 import React from 'react';
 import './MeetTheTeam.scss';
 // import { useStore } from '../../hooks-store/store';
-import configureMembersStore from '../../hooks-store/members';
 
 import Grid from '@material-ui/core/Grid';
 
 import { ReactTitle } from 'react-meta-tags';
 import MetaTags from 'react-meta-tags';
-
-configureMembersStore();
 
 const MeetTheTeam = (props) => {
     const images = require.context('./assets', true);

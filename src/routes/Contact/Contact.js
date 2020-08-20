@@ -118,8 +118,8 @@ const Contact = () => {
                             }}
                         >
                             Sign up for our newsletter to receive news and
-                            updates on everything Leclair Decor! You’ll be the
-                            first to hear about our sales at LD shoppe and
+                            updates on everything Tierra Decor! You’ll be the
+                            first to hear about our sales and
                             you’ll get all the intel on our latest projects and
                             blog posts.
                         </p>

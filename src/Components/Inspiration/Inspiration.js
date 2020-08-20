@@ -12,7 +12,7 @@ const Inspiration = () => {
     // markfod
     useEffect(() => {
         const token =
-            'IGQVJWMkpPRW16MmhxVGR5ZA3JjYWduNjk1R2tUUzdwV3hFRzk0VW5kYTU3c0ktU2tsX21icmhGdDlVSHpwc1RLYmVTTmVCaUJWeXo5RWphOXBnbnBNZAEIxcWtvalJfZAHJuRHBfbnh0dlFpMktFcUFmeQZDZD';
+            'IGQVJYc2pUaXo4QTJCVElIMEhKdGtFN1VJbFd5WHhYbWU1c2RSNHhERlBLQk9ZAYXdULUIxNFhHZAjg3Mjh0LWRpcnJ4Y2FJUzNZANU5mY1VMNTBZARHBvOWlMNG1JT05FRVhqd3ZAWdVZAvRERadHdtVGtBVgZDZD';
         var feed = new window.Instafeed({
             get: 'user',
             // limit: 8,
