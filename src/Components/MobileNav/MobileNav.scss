@@ -196,17 +196,17 @@
 }
 
 @media only screen and (max-width: 1600px) {
-    #OverlayNav #MobileNavWrapper nav div a {
+    #OverlayNav #MobileNavWrapper nav a {
         font-size: 48px;
     }
 }
 @media only screen and (max-width: 1280px) {
-    #OverlayNav #MobileNavWrapper nav div a {
+    #OverlayNav #MobileNavWrapper nav a {
         font-size: 36px;
     }
 }
 @media only screen and (max-width: 1024px) {
-    #OverlayNav #MobileNavWrapper nav div a {
+    #OverlayNav #MobileNavWrapper nav a {
         font-size: 30px;
     }
 }
@@ -238,7 +238,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-    #OverlayNav #MobileNavWrapper nav div a {
+    #OverlayNav #MobileNavWrapper nav a {
         font-size: 24px;
     }
     .mobile-nav-toggle-label {

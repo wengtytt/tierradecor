@@ -58,7 +58,12 @@ const MobileNav = (props) => {
 
         if (item.external) {
             return (
-                <a href={item.path} target="_blank">
+                <a
+                    href={item.path}
+                    key={i}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {item.label}
                 </a>
             );

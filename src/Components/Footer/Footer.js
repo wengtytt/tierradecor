@@ -17,6 +17,7 @@ const Footer = (props) => {
                         <a
                             href="https://www.instagram.com/tierradecorcanada/"
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <svg
                                 height="28pt"
@@ -32,6 +33,7 @@ const Footer = (props) => {
                         <a
                             href="https://www.facebook.com/tierra.decor.1/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             id="icon-left-space"
                         >
                             <svg
