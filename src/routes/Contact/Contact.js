@@ -91,10 +91,6 @@ const Contact = () => {
                     <a href="mailto:service@tierradecor.com">
                         service@tierradecor.com{' '}
                     </a>{' '}
-                    Address |{' '}
-                    <span className="color-theme">
-                        50 Colonnade Rd B200, Nepean, ON K2E 7J6{' '}
-                    </span>
                 </p>
             </div>
             <SpacingBlock></SpacingBlock>
