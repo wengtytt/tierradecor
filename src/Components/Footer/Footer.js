@@ -49,8 +49,7 @@ const Footer = (props) => {
                 </div>
                 <div className="html-block">
                     <p style={{ textAlign: 'center', whiteSpace: 'pre-wrap' }}>
-                        50 Colonnade Rd B200, Nepean, ON K2E 7J6 <br></br>© 2020
-                        Tierra Decor Inc.
+                        © 2020 Tierra Decor Inc.
                     </p>
                 </div>
             </div>
