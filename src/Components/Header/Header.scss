@@ -122,14 +122,19 @@ nav {
 
 .nav-wrapper {
     position: relative;
-    nav > div {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
+    nav {
         & > a {
-            display: block;
             padding: 0.75em 1.2em;
-            transition: color 0.1s 0s ease-in-out;
+        }
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            & > a {
+                display: block;
+                padding: 0.75em 1.2em;
+                transition: color 0.1s 0s ease-in-out;
+            }
         }
     }
 }

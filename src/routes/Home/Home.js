@@ -38,14 +38,15 @@ const Home = (props) => {
         autoplay: true,
         dots: false,
         fade: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 5000
     };
 
-    const about_us_3 = "Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. "
+    const about_us_3 =
+        'Tierra Décor is built upon values and visions that remain foundational to our business. Fusing design moments over the years, we have essentially redefined design into something more expressive and individualized. ';
 
     const [info, setInfo] = useState({
         blogs: [],
-        loaded: false,
+        loaded: false
     });
 
     useEffect(() => {
@@ -54,7 +55,7 @@ const Home = (props) => {
                 if (response.data) {
                     setInfo({
                         blogs: response.data,
-                        loaded: true,
+                        loaded: true
                     });
                 }
             });
@@ -68,15 +69,27 @@ const Home = (props) => {
         const alt = item.alt_text;
 
         return (
-            <Grid key={item.blog_id} item xs={12} sm={6} className="blog-profile default">
-                <NavLink to={{
-                    pathname: `/blog/${item.blog_id}`,
-                }}>
+            <Grid
+                key={item.blog_id}
+                item
+                xs={12}
+                sm={6}
+                className="blog-profile default"
+            >
+                <NavLink
+                    to={{
+                        pathname: `/blog/${item.blog_id}`
+                    }}
+                >
                     <div className="blog-image">
                         <div className="blog-img-link">
-                            <img style={{
-                                height: '100%'
-                            }} src={cover} alt={alt} />
+                            <img
+                                style={{
+                                    height: '100%'
+                                }}
+                                src={cover}
+                                alt={alt}
+                            />
                         </div>
                     </div>
                     <div className="blog-meta summary-date">{date}</div>
@@ -94,7 +107,10 @@ const Home = (props) => {
                 <meta name="About" content={about_us_3} />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Home — Tierra Decor" />
-                <meta property="og:url" content="https://www.tierradecor.com/" />
+                <meta
+                    property="og:url"
+                    content="https://www.tierradecor.com/"
+                />
                 <meta itemProp="name" content="Home — Tierra Decor" />
                 <meta itemProp="url" content="https://www.tierradecor.com/" />
             </MetaTags>
@@ -114,7 +130,7 @@ const Home = (props) => {
                         <h1
                             style={{
                                 textAlign: 'center',
-                                whiteSpace: 'pre-wrap',
+                                whiteSpace: 'pre-wrap'
                             }}
                         >
                             WHO WE ARE
@@ -122,7 +138,7 @@ const Home = (props) => {
                         <h2
                             style={{
                                 textAlign: 'center',
-                                whiteSpace: 'pre-wrap',
+                                whiteSpace: 'pre-wrap'
                             }}
                         >
                             {about_us_3}
@@ -147,7 +163,7 @@ const Home = (props) => {
                         <h1
                             style={{
                                 textAlign: 'center',
-                                whiteSpace: 'pre-wrap',
+                                whiteSpace: 'pre-wrap'
                             }}
                         >
                             BLOG
@@ -163,7 +179,7 @@ const Home = (props) => {
                         <h1
                             style={{
                                 textAlign: 'center',
-                                whiteSpace: 'pre-wrap',
+                                whiteSpace: 'pre-wrap'
                             }}
                         >
                             CONTACT US
@@ -173,12 +189,12 @@ const Home = (props) => {
                             <a href="mailto:service@tierradecor.com">
                                 service@tierradecor.com{' '}
                             </a>{' '}
-                            Phone |{' '}
+                            {/* Phone |{' '}
                             <span className="color-theme">
                                 +1 613-226-6886 </span>{' '}
                             Address |{' '}
                             <span className="color-theme">
-                                50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span>
+                                50 Colonnade Rd B200, Nepean, ON K2E 7J6 </span> */}
                         </p>
                     </div>
                 </div>

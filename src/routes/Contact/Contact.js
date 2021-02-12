@@ -21,7 +21,7 @@ const Contact = () => {
         email: '',
         msg: '',
         submitting: false,
-        subscribed: false,
+        subscribed: false
     });
 
     const ref = useRef('form');
@@ -40,7 +40,7 @@ const Contact = () => {
             .then((response) => {
                 setFormInfo({
                     ...formInfo,
-                    ...{ submitting: false, subscribed: true },
+                    ...{ submitting: false, subscribed: true }
                 });
             })
             .catch((error) => {
@@ -57,7 +57,7 @@ const Contact = () => {
                 <title>Contact</title>
                 <meta
                     name="About"
-                    content="General Inquiries | service@tierradecor.com  Address | 50 Colonnade Rd B200, Nepean, ON K2E 7J6"
+                    content="General Inquiries | service@tierradecor.com"
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Contact — Tierra Decor" />
@@ -76,7 +76,7 @@ const Contact = () => {
                 <h1
                     style={{
                         textAlign: 'center',
-                        whiteSpace: 'pre-wrap',
+                        whiteSpace: 'pre-wrap'
                     }}
                 >
                     CONTACT
@@ -84,7 +84,7 @@ const Contact = () => {
                 <p
                     style={{
                         textAlign: 'center',
-                        whiteSpace: 'pre-wrap',
+                        whiteSpace: 'pre-wrap'
                     }}
                 >
                     General Inquiries |{' '}
@@ -102,7 +102,7 @@ const Contact = () => {
                 <h1
                     style={{
                         textAlign: 'center',
-                        whiteSpace: 'pre-wrap',
+                        whiteSpace: 'pre-wrap'
                     }}
                 >
                     NEWSLETTER
@@ -114,14 +114,13 @@ const Contact = () => {
                             style={{
                                 textAlign: 'center',
                                 whiteSpace: 'pre-wrap',
-                                letterSpacing: '.8px',
+                                letterSpacing: '.8px'
                             }}
                         >
                             Sign up for our newsletter to receive news and
                             updates on everything Tierra Decor! You’ll be the
-                            first to hear about our sales and
-                            you’ll get all the intel on our latest projects and
-                            blog posts.
+                            first to hear about our sales and you’ll get all the
+                            intel on our latest projects and blog posts.
                         </p>
                     </Grid>
                     <Grid item xs={false} sm={2}></Grid>
@@ -155,7 +154,7 @@ const Contact = () => {
                                 validators={['required', 'isEmail']}
                                 errorMessages={[
                                     'This field is required',
-                                    'Email address is not valid',
+                                    'Email address is not valid'
                                 ]}
                             />
                             <TextField
@@ -175,7 +174,7 @@ const Contact = () => {
                                     color: '#4d4d4d',
                                     fontWeight: '400',
                                     fontFamily: 'Raleway',
-                                    fontSize: '12px',
+                                    fontSize: '12px'
                                 }}
                                 variant="contained"
                                 type="submit"
@@ -189,11 +188,11 @@ const Contact = () => {
                                     formInfo.submitting ? (
                                         <CircularProgress color="secondary" />
                                     ) : (
-                                            'Sent'
-                                        )
+                                        'Sent'
+                                    )
                                 ) : (
-                                        'Submit'
-                                    )}
+                                    'Submit'
+                                )}
                             </Button>
                         </ValidatorForm>
                     </Grid>
